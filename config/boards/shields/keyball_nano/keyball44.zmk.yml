@@ -7,7 +7,6 @@ requires: [pro_micro]
 features:
   - keys
   - pointer
-  - underglow
 siblings:
   - keyball44_left
   - keyball44_right
