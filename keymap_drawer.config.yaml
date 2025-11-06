@@ -20,15 +20,49 @@ draw_config:
     /* For default sytles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
 
     svg.keymap {
-      font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
-      font-size: 12px;
+      font-family: Sometype Mono, Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
+      font-size: 22px;
       font-weight: bold;
       text-rendering: optimizeLegibility;
+    }
+    
+    /* default key side styling, only used is draw_key_sides is set */
+    rect.side {
+      filter: brightness(80%);
+    }
+
+    text {
+      text-anchor: middle;
+      dominant-baseline: hanging;
+    }
+    
+    /* styling for layer labels */
+    text.label {
+      font-weight: bold;
+      text-anchor: start;
+      stroke: white;
+      stroke-width: 6;
+      paint-order: stroke;
+    }
+    
+    /* styling for combo tap, and key non-tap label text */
+    text.combo, text.hold, text.shifted, text.left, text.right {
+      font-size: 18px;
+    }
+    
+    text.hold {
+      text-anchor: middle;
+      dominant-baseline: auto;
+    }
+  
+    text.shifted {
+      text-anchor: middle;
+      dominant-baseline: hanging;
     }
 
     /* Color accent for held keys */
     rect.held, rect.combo.held {
-        fill: #ffc;
+      fill: #ffc;
     }
 
     /* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
