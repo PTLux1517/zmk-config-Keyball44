@@ -36,7 +36,7 @@
         compatible = "zmk,combos";
         combo_mouse_middle_click {
             timeout-ms = <100>;
-            key-positions = <36,37>;
+            key-positions = <36 37>;
             layers = <ALPHA>;
             bindings = <&mkp MCLK>;
         };
