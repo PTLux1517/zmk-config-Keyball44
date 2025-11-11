@@ -316,6 +316,6 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
 combos:
-- p: [42, 43]
+- p: [41, 42]
   k: $$mdi:keyboard-tab$$
   l: [ALPHAS, SYMBLS, FUNCTS, M_BTNS, SCROLL, LOWDPI]
