@@ -34,7 +34,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp UNDER>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LALT)>;
         };
         morph_FBSLH: morph_forwardslash_backslash {
             compatible = "zmk,behavior-mod-morph";
@@ -54,7 +54,7 @@
             bindings = <&kp RPAR>, <&kp RBKT>;
             mods = <(MOD_LSFT)>;
         };
-        td0: tap_dance_0 {
+        td_SHIFTCAPS: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -99,7 +99,7 @@
 &kp DEL               &kp G                 &kp V                 &kp D                 &kp F                 &kp J                                                             &kp Q                 &kp R                 &kp U                 &kp O                 &kp Y                 &kp BACKSPACE
 &sk LALT              &kp C                 &kp S                 &kp T                 &kp H                 &kp APOS                                                          &kp L                 &kp N                 &kp E                 &kp A                 &kp I                 &kp SEMI
 &sk LCTRL             &kp W                 &kp B                 &kp M                 &kp P                 &kp K                                                             &kp Z                 &kp X                 &kp COMMA             &kp DOT               &kp QMARK             &kp EXCL
-                                            &mo LOWDPI            &mo SCROLL            &mo FUNCTS            &mo DIGITS            &sk LSHFT             &morph_SPACEUNDER     &kp ENTER                                                                               &mo M_BTNS
+                                            &mo LOWDPI            &mo SCROLL            &mo FUNCTS            &mo DIGITS            &td_SHIFTCAPS         &morph_SPACEUNDER     &kp ENTER                                                                               &mo M_BTNS
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: DIGITS ------------------------------------------------------------------------------------------------------------------------------------------
@@ -109,7 +109,7 @@
 &kp DEL               &kp CARET             &kp N7                &kp N8                &kp N9                &kp KP_MULTIPLY                                                   &kp KP_PLUS           &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
 &kp LBRC              &kp RBRC              &kp N4                &kp N5                &kp N6                &kp KP_DIVIDE                                                     &kp KP_MINUS          &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &kp GRAVE
 &kp EQUAL             &kp N0                &kp N1                &kp N2                &kp N3                &kp DOT                                                           &kp COMMA             &kp K_VOL_DN          &kp C_MUTE            &kp K_VOL_UP          &kp LGUI              &kp ESC
-                                            &morph_LPARBKT        &morph_RPARBKT        &to SYMBLS            &trans                &kp LSHFT             &morph_SPACEUNDER     &kp ENTER                                                                               &mo M_BTNS
+                                            &morph_LPARBKT        &morph_RPARBKT        &to SYMBLS            &trans                &sk LSHFT             &morph_SPACEUNDER     &kp ENTER                                                                               &mo M_BTNS
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: SYMBLS ------------------------------------------------------------------------------------------------------------------------------------------
