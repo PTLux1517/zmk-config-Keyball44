@@ -1,9 +1,10 @@
-#define ALPHA  0
-#define NUM    1
-#define SYMB   2
-#define FUNC   3
+#define ALPHAS 0
+#define DIGITS 1
+#define SYMBLS 2
+#define FUNCTS 3
 #define SCROLL 4
-#define SNIPE  5
+#define LOWDPI 5
+#define M_BTNS 6
 
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors.dtsi>
@@ -24,6 +25,12 @@
     quick-tap-ms = <150>;
 };
 
+&sk {
+   release-after-ms = <2000>;
+   quick-release;
+   lazy;
+};
+
 &caps_word { continue-list = <UNDERSCORE MINUS>; };
 
 / {
@@ -37,12 +44,13 @@
         combo_mouse_middle_click {
             timeout-ms = <100>;
             key-positions = <36 37>;
-            layers = <ALPHA SYMB FUNC SCROLL SNIPE>;
+            layers = <ALPHAS SYMBLS FUNCTS SCROLL LOWDPI>; //todo: change to space+enter = tab
             bindings = <&mkp MB3>;
         };
     };
 
     keymap {
+        compatible = "zmk,keymap";
 
 // ------------------------------------------------------------------------------------------------------------------------------ EMPTY LAYER TEMPLATES FOR COPY-PASTE -----------------------------------------------------------------------------------------------------------------------------
 //
@@ -60,46 +68,45 @@
 // &kp X                 &kp X                 &kp X                 &kp X                 &kp X                 &kp X                                                             &kp X                 &kp X                 &kp X                 &kp X                 &kp X                 &kp X
 // &kp X                 &kp X                 &kp X                 &kp X                 &kp X                 &kp X                                                             &kp X                 &kp X                 &kp X                 &kp X                 &kp X                 &kp X
 //                                             &kp X                 &kp X                 &kp X                 &kp X                 &kp X                 &kp X                 &kp X                                                                                   &kp X
-        compatible = "zmk,keymap";
 
-// ------------------------------------------------------------------------------------------------------------------------------------------ LAYER ALPHA ------------------------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------------------------------- LAYER ALPHAS ------------------------------------------------------------------------------------------------------------------------------------------
         default_layer {
-            label = "ALPHA";
+            label = "ALPHAS";
             bindings = <
 &kp DEL               &kp G                 &kp V                 &kp D                 &kp F                 &kp J                                                             &kp Q                 &kp R                 &kp U                 &kp O                 &kp Y                 &kp BACKSPACE
-&kp LALT              &kp C                 &kp S                 &kp T                 &kp H                 &lt SCROLL APOS                                                   &kp L                 &kp N                 &kp E                 &kp A                 &kp I                 &kp SEMI
-&kp LCTRL             &kp W                 &kp B                 &kp M                 &kp P                 &kp K                                                             &kp Z                 &kp X                 &kp COMMA             &kp DOT               &kp QMARK             &kp EXCL
-                                            &mkp MB1              &mkp MB2              &lt SNIPE UNDER       &mo NUM               &kp LSHFT             &kp SPACE             &kp ENTER                                                                               &lt FUNC TAB
+&sk LALT              &kp C                 &kp S                 &kp T                 &kp H                 &kp APOS                                                          &kp L                 &kp N                 &kp E                 &kp A                 &kp I                 &kp SEMI
+&sk LCTRL             &kp W                 &kp B                 &kp M                 &kp P                 &kp K                                                             &kp Z                 &kp X                 &kp COMMA             &kp DOT               &kp QMARK             &kp EXCL
+                                            &mo LOWDPI            &mo SCROLL            &lt FUNCTS UNDER      &mo DIGITS            &sk LSHFT             &kp SPACE             &kp ENTER                                                                               &mo M_BTNS
             >;
         };
-// ------------------------------------------------------------------------------------------------------------------------------------------- LAYER NUM -------------------------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------------------------------- LAYER DIGITS ------------------------------------------------------------------------------------------------------------------------------------------
         number_layer {
-            label = "NUM";
+            label = "DIGITS";
             bindings = <
 &to SYMB              &kp CARET             &kp N7                &kp N8                &kp N9                &kp KP_MULTIPLY                                                   &kp KP_PLUS           &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
 &kp CAPS              &kp BSLH              &kp N4                &kp N5                &kp N6                &kp KP_DIVIDE                                                     &kp KP_MINUS          &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &kp GRAVE
-&kp LCTRL             &kp N0                &kp N1                &kp N2                &kp N3                &kp LPAR                                                          &kp RPAR              &kp K_VOL_DN          &kp EQUAL             &kp K_VOL_UP          &kp LGUI              &kp ESC
-                                            &kp COMMA             &kp DOT               &kp LBKT              &trans                &kp LSHFT             &kp SPACE             &kp ENTER                                                                               &kp RBKT
+&kp INS               &kp N0                &kp N1                &kp N2                &kp N3                &kp DOT                                                           &kp COMMA             &kp K_VOL_DN          &kp EQUAL             &kp K_VOL_UP          &kp LGUI              &kp ESC
+                                            &kp LPAR              &kp RPAR              &kp UNDER             &trans                &kp LSHFT             &kp SPACE             &kp ENTER                                                                               &mo M_BTNS
             >;
         };
-// ------------------------------------------------------------------------------------------------------------------------------------------ LAYER SYMB -------------------------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------------------------------- LAYER SYMBLS ------------------------------------------------------------------------------------------------------------------------------------------
         symbol_layer {
-            label = "SYMB";
+            label = "SYMBLS";
             bindings = <
 &to ALPHA             &none                 &kp HOME              &kp UP                &kp END               &kp LBRC                                                          &kp RBRC              &kp KP_DIVIDE         &kp KP_MULTIPLY       &kp HASH              &kp CARET             &kp BACKSPACE
 &none                 &none                 &kp LEFT              &kp DOWN              &kp RIGHT             &kp LBKT                                                          &kp RBKT              &kp EXCL              &kp KP_MINUS          &kp QMARK             &kp PIPE              &kp SEMI
 &none                 &none                 &kp GRAVE             &kp APOS              &kp LS(APOS)          &kp LPAR                                                          &kp RPAR              &kp LT                &kp EQUAL             &kp GT                &kp AMPS              &kp LS(GRAVE)
-                                            &trans                &trans                &none                 &none                 &kp LSHFT             &kp SPACE             &kp ENTER                                                                               &kp TAB
+                                            &trans                &trans                &kp UNDER             &mo DIGITS            &kp LSHFT             &kp SPACE             &kp ENTER                                                                               &mo M_BTNS
             >;
         };
-// ------------------------------------------------------------------------------------------------------------------------------------------ LAYER FUNC -------------------------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------------------------------- LAYER FUNCTS ------------------------------------------------------------------------------------------------------------------------------------------
         function_layer {
-            label = "FUNC";
+            label = "FUNCTS";
             bindings = <
-&none                 &kp F12               &kp F7                &kp F8                &kp F9                &none                                                             &none                 &none                 &none                 &none                 &none                 &none
-&none                 &kp F11               &kp F4                &kp F5                &kp F6                &none                                                             &none                 &none                 &none                 &none                 &none                 &none
-&none                 &kp F10               &kp F1                &kp F2                &kp F3                &none                                                             &none                 &none                 &none                 &none                 &none                 &none
-                                            &trans                &trans                &none                 &none                 &kp LSHFT             &kp LCTRL             &kp LALT                                                                                &trans
+&sk LSHFT             &kp F12               &kp F7                &kp F8                &kp F9                &none                                                             &none                 &none                 &none                 &none                 &none                 &none
+&sk LALT              &kp F11               &kp F4                &kp F5                &kp F6                &none                                                             &none                 &none                 &none                 &none                 &none                 &none
+&sk LCTRL             &kp F10               &kp F1                &kp F2                &kp F3                &none                                                             &none                 &none                 &none                 &none                 &none                 &none
+                                            &trans                &trans                &none                 &none                 &none                 &none                 &none                                                                                   &none
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER SCROLL ------------------------------------------------------------------------------------------------------------------------------------------
@@ -112,14 +119,24 @@
                                             &trans                &trans                &trans                &trans                &trans                &trans                &trans                                                                                  &trans
             >;
         };
-// ------------------------------------------------------------------------------------------------------------------------------------------ LAYER SNIPE ------------------------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------------------------------- LAYER LOWDPI ------------------------------------------------------------------------------------------------------------------------------------------
         snipe_layer {
-            label = "SNIPE";
+            label = "LOWDPI";
             bindings = <
 &trans                &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans                &trans
 &trans                &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans                &trans
 &trans                &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans                &trans
                                             &trans                &trans                &trans                &trans                &trans                &trans                &trans                                                                                  &trans
+            >;
+        };
+// ----------------------------------------------------------------------------------------------------------------------------------------- LAYER M_BTNS ------------------------------------------------------------------------------------------------------------------------------------------
+        mouse_button_layer {
+            label = "M_BTNS";
+            bindings = <
+&sk LSHFT             &none                 &kp HOME              &kp UP                &kp END               &kp PG_UP                                                         &none                 &none                 &none                 &none                 &none                 &none
+&sk LALT              &none                 &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN                                                         &none                 &mkp MB4              &mkp MB5              &none                 &none                 &none
+&sk LCTRL             &none                 &none                 &none                 &none                 &none                                                             &kp BACKSPACE         &mkp MB1              &mkp MB2              &mkp MB3              &none                 &none
+                                            &mo LOWDPI            &mo SCROLL            &none                 &none                 &sk LSHFT             &kp SPACE             &kp ENTER                                                                               &trans
             >;
         };
     };
