@@ -41,7 +41,7 @@ layers:
   - SCROLL
   - FUNCTS
   - DIGITS
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - '&td_SHIFTCAPS'
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - M_BTNS
@@ -86,7 +86,7 @@ layers:
   - {t: ), s: ']'}
   - {t: SYMBLS, h: toggle}
   - {type: held}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - M_BTNS
