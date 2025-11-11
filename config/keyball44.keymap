@@ -34,7 +34,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp UNDER>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LCTRL)>;
         };
         morph_FBSLH: morph_forwardslash_backslash {
             compatible = "zmk,behavior-mod-morph";
@@ -54,11 +54,11 @@
             bindings = <&kp RPAR>, <&kp RBKT>;
             mods = <(MOD_LSFT)>;
         };
-        td_SHIFTCAPS: tap_dance_0 {
+        td_SHIFTCAPS: td_shiftcaps {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&sk LSHFT>, <&kp CAPS>;
+            bindings = <&sk LSHFT>, <&caps_word>, <&kp CAPS>;
         };
     };
 
