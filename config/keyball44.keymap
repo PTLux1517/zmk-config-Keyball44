@@ -25,7 +25,7 @@
    lazy;
 };
 
-&caps_word { continue-list = <UNDERSCORE MINUS>; };
+&caps_word { continue-list = <SPACE UNDERSCORE MINUS>; };
 
 / {
 
@@ -34,7 +34,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp UNDER>;
-            mods = <(MOD_LCTRL)>;
+            mods = <(MOD_LCTL)>;
         };
         morph_FBSLH: morph_forwardslash_backslash {
             compatible = "zmk,behavior-mod-morph";
