@@ -19,13 +19,18 @@
     quick-tap-ms = <150>;
 };
 
+&mt {
+    tapping-term-ms = <200>;
+    flavor = "tap-preferred";
+};
+
 &sk {
    release-after-ms = <2000>;
    quick-release;
    lazy;
 };
 
-&caps_word { continue-list = <SPACE UNDERSCORE MINUS>; };
+&caps_word { continue-list = <BACKSPACE DEL SPACE ENTER TAB UNDERSCORE COMMA DOT SEMI QMARK EXCL MINUS APOS>; };
 
 / {
 
@@ -34,7 +39,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp UNDER>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LSFT)>;
         };
         morph_FBSLH: morph_forwardslash_backslash {
             compatible = "zmk,behavior-mod-morph";
@@ -54,11 +59,17 @@
             bindings = <&kp RPAR>, <&kp RBKT>;
             mods = <(MOD_LSFT)>;
         };
-        td_SHIFTCAPS: td_shiftcaps {
+        td_SHFTCAPS: td_shiftcaps {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&sk LSHFT>, <&caps_word>, <&kp CAPS>;
+        };
+        mt: mt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&td>, <&kp>;
+            display-name = "Mod_Tap";
         };
     };
 
@@ -99,7 +110,7 @@
 &kp DEL               &kp G                 &kp V                 &kp D                 &kp F                 &kp J                                                             &kp Q                 &kp R                 &kp U                 &kp O                 &kp Y                 &kp BACKSPACE
 &sk LALT              &kp C                 &kp S                 &kp T                 &kp H                 &kp APOS                                                          &kp L                 &kp N                 &kp E                 &kp A                 &kp I                 &kp SEMI
 &sk LCTRL             &kp W                 &kp B                 &kp M                 &kp P                 &kp K                                                             &kp Z                 &kp X                 &kp COMMA             &kp DOT               &kp QMARK             &kp EXCL
-                                            &mo LOWDPI            &mo SCROLL            &mo FUNCTS            &mo DIGITS            &td_SHIFTCAPS         &morph_SPACEUNDER     &kp ENTER                                                                               &mo M_BTNS
+                                            &mo LOWDPI            &mo SCROLL            &mo FUNCTS            &mo DIGITS            &mt SHIFT td_SHFTCAPS &morph_SPACEUNDER     &kp ENTER                                                                               &tog M_BTNS
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: DIGITS ------------------------------------------------------------------------------------------------------------------------------------------
@@ -109,7 +120,7 @@
 &kp DEL               &kp CARET             &kp N7                &kp N8                &kp N9                &kp KP_MULTIPLY                                                   &kp KP_PLUS           &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
 &kp LBRC              &kp RBRC              &kp N4                &kp N5                &kp N6                &kp KP_DIVIDE                                                     &kp KP_MINUS          &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &kp GRAVE
 &kp EQUAL             &kp N0                &kp N1                &kp N2                &kp N3                &kp DOT                                                           &kp COMMA             &kp K_VOL_DN          &kp C_MUTE            &kp K_VOL_UP          &kp LGUI              &kp ESC
-                                            &morph_LPARBKT        &morph_RPARBKT        &to SYMBLS            &trans                &sk LSHFT             &morph_SPACEUNDER     &kp ENTER                                                                               &mo M_BTNS
+                                            &morph_LPARBKT        &morph_RPARBKT        &to SYMBLS            &trans                &mt SHIFT td_SHFTCAPS &morph_SPACEUNDER     &kp ENTER                                                                               &tog M_BTNS
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: SYMBLS ------------------------------------------------------------------------------------------------------------------------------------------
@@ -119,7 +130,7 @@
 &kp DEL               &kp PG_UP             &kp HOME              &kp UP                &kp END               &kp LBRC                                                          &kp RBRC              &morph_FBSLH          &kp KP_MULTIPLY       &kp HASH              &kp CARET             &kp BACKSPACE
 &none                 &kp PG_DN             &kp LEFT              &kp DOWN              &kp RIGHT             &kp LBKT                                                          &kp RBKT              &kp EXCL              &kp KP_MINUS          &kp QMARK             &kp AMPS              &kp SEMI
 &none                 &none                 &kp GRAVE             &kp APOS              &kp LS(APOS)          &kp LPAR                                                          &kp RPAR              &kp LT                &kp EQUAL             &kp GT                &kp PIPE              &kp LS(GRAVE)
-                                            &mo LOWDPI            &mo SCROLL            &to ALPHAS            &mo DIGITS            &kp LSHFT             &morph_SPACEUNDER     &kp ENTER                                                                               &mo M_BTNS
+                                            &mo LOWDPI            &mo SCROLL            &to ALPHAS            &mo DIGITS            &mt SHIFT td_SHFTCAPS &morph_SPACEUNDER     &kp ENTER                                                                               &tog M_BTNS
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: FUNCTS ------------------------------------------------------------------------------------------------------------------------------------------
@@ -129,7 +140,7 @@
 &sk LSHFT             &none                 &kp F7                &kp F8                &kp F9                &kp F10                                                           &none                 &none                 &none                 &none                 &none                 &none
 &sk LALT              &none                 &kp F4                &kp F5                &kp F6                &kp F11                                                           &none                 &none                 &none                 &none                 &none                 &none
 &sk LCTRL             &none                 &kp F1                &kp F2                &kp F3                &kp F12                                                           &none                 &none                 &none                 &none                 &none                 &none
-                                            &mo LOWDPI            &mo SCROLL            &trans                &none                 &sk LSHFT             &none                 &none                                                                                   &trans
+                                            &mo LOWDPI            &mo SCROLL            &trans                &none                 &mt SHIFT td_SHFTCAPS &none                 &none                                                                                   &trans
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: M_BTNS ------------------------------------------------------------------------------------------------------------------------------------------
@@ -139,7 +150,7 @@
 &none                 &none                 &kp HOME              &kp UP                &kp END               &kp PG_UP                                                         &none                 &none                 &none                 &none                 &none                 &none
 &kp LALT              &none                 &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN                                                         &none                 &mkp MB4              &mkp MB5              &none                 &none                 &none
 &kp LCTRL             &none                 &none                 &none                 &none                 &kp DEL                                                           &kp BACKSPACE         &mkp MB1              &mkp MB2              &mkp MB3              &none                 &none
-                                            &mo LOWDPI            &mo SCROLL            &none                 &none                 &kp LSHFT             &morph_SPACEUNDER     &kp ENTER                                                                               &trans
+                                            &mo LOWDPI            &mo SCROLL            &kp K_PASTE           &kp K_COPY            &mt SHIFT td_SHFTCAPS &morph_SPACEUNDER     &kp ENTER                                                                               &trans
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: SCROLL ------------------------------------------------------------------------------------------------------------------------------------------
