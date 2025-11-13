@@ -41,10 +41,10 @@ layers:
   - SCROLL
   - FUNCTS
   - DIGITS
-  - '&td_SHIFTCAPS'
+  - {t: td SHFTCAPS, h: '&td SHIFT'}
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - M_BTNS
+  - {t: M_BTNS, h: toggle}
   DIGITS:
   - $$mdi:backspace-reverse-outline$$
   - ^
@@ -86,10 +86,10 @@ layers:
   - {t: ), s: ']'}
   - {t: SYMBLS, h: toggle}
   - {type: held}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: td SHFTCAPS, h: '&td SHIFT'}
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - M_BTNS
+  - {t: M_BTNS, h: toggle}
   SYMBLS:
   - $$mdi:backspace-reverse-outline$$
   - PG UP
@@ -131,10 +131,10 @@ layers:
   - SCROLL
   - {t: ALPHAS, h: toggle}
   - DIGITS
-  - $$mdi:apple-keyboard-shift$$
+  - {t: td SHFTCAPS, h: '&td SHIFT'}
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - M_BTNS
+  - {t: M_BTNS, h: toggle}
   FUNCTS:
   - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -176,7 +176,7 @@ layers:
   - SCROLL
   - {type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: td SHFTCAPS, h: '&td SHIFT'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -219,12 +219,12 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - LOWDPI
   - SCROLL
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
-  - $$mdi:apple-keyboard-shift$$
+  - PASTE
+  - COPY
+  - {t: td SHFTCAPS, h: '&td SHIFT'}
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   SCROLL:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -265,11 +265,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {type: held alternate}
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   LOWDPI:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -310,11 +310,11 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [41, 42]
   k: $$mdi:keyboard-tab$$
