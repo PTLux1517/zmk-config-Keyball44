@@ -68,7 +68,7 @@
         mt: mt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            bindings = <&kp SHIFT>, <&td_SHFTCAPS>;
+            bindings = <&kp>, <&kp>;
             display-name = "Mod_Tap";
         };
     };
