@@ -41,7 +41,7 @@ layers:
   - SCROLL
   - FUNCTS
   - DIGITS
-  - {t: '&td td_SHFTCAPS', h: SHIFT}
+  - {t: '&td td_SHFTCAPS', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: M_BTNS, h: toggle}
@@ -86,7 +86,7 @@ layers:
   - {t: ), s: ']'}
   - {t: SYMBLS, h: toggle}
   - {type: held}
-  - {t: '&td td_SHFTCAPS', h: SHIFT}
+  - {t: '&td td_SHFTCAPS', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: M_BTNS, h: toggle}
@@ -131,7 +131,7 @@ layers:
   - SCROLL
   - {t: ALPHAS, h: toggle}
   - DIGITS
-  - {t: '&td td_SHFTCAPS', h: SHIFT}
+  - {t: '&td td_SHFTCAPS', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: M_BTNS, h: toggle}
@@ -176,7 +176,7 @@ layers:
   - SCROLL
   - {type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '&td td_SHFTCAPS', h: SHIFT}
+  - {t: '&td td_SHFTCAPS', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -221,7 +221,7 @@ layers:
   - SCROLL
   - PASTE
   - COPY
-  - {t: '&td td_SHFTCAPS', h: SHIFT}
+  - {t: '&td td_SHFTCAPS', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
