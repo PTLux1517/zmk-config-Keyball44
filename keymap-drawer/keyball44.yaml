@@ -63,7 +63,7 @@ layers:
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
-  - /
+  - {t: /, s: \}
   - '-'
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -80,15 +80,15 @@ layers:
   - $$mdi:volume-minus$$
   - $$mdi:volume-off$$
   - $$mdi:volume-plus$$
-  - $$mdi:ubuntu$$
+  - $$mdi:linux$$
   - ESC
   - {t: (, s: '['}
   - {t: ), s: ']'}
   - FUNCTS
   - {type: held}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-caps$$'}
-  - {t: '$$mdi:keyboard-space$$', s: _}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: M_BTNS, h: togl}
   SYMBLS:
   - $$mdi:backspace-reverse$$
@@ -131,9 +131,9 @@ layers:
   - SCROLL
   - {type: held}
   - FUNCTS
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-caps$$'}
-  - {t: '$$mdi:keyboard-space$$', s: _}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: M_BTNS, h: togl}
   FUNCTS:
   - {t: '$$mdi:apple-keyboard-shift$$', h: stky}
@@ -176,7 +176,7 @@ layers:
   - SCROLL
   - {type: held}
   - {type: held}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-caps$$'}
+  - {t: ▽, type: trans}
   - {type: none}
   - {type: none}
   - {t: ▽, type: trans}
@@ -222,8 +222,8 @@ layers:
   - SYMBLS
   - DIGITS
   - {t: ALPHAS, h: togl}
-  - {t: '$$mdi:keyboard-space$$', s: _}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SCROLL:
   - {t: ▽, type: trans}
@@ -318,4 +318,4 @@ layers:
 combos:
 - p: [41, 42]
   k: $$mdi:keyboard-tab$$
-  l: [ALPHAS, SYMBLS, FUNCTS, M_BTNS, SCROLL, LOWDPI]
+  l: [ALPHAS, DIGITS, SYMBLS, M_BTNS, SCROLL, LOWDPI]
