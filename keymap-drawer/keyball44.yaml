@@ -183,27 +183,27 @@ layers:
   M_BTNS:
   - $$mdi:backspace-reverse$$
   - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
   - PG UP
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
   - {t: '$$mdi:backspace$$', type: backspace}
   - ALT
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
   - {type: none}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - PG DN
-  - {type: none}
-  - $$mdi:arrow-left-box$$
-  - $$mdi:arrow-right-box$$
-  - {type: none}
-  - {type: none}
   - {type: none}
   - CTRL
   - {type: none}
@@ -215,13 +215,13 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
-  - {type: none}
-  - {type: none}
+  - $$mdi:arrow-left-box$$
+  - $$mdi:arrow-right-box$$
   - LOWDPI
   - SCROLL
   - SYMBLS
   - DIGITS
-  - {t: ALPHAS, h: togl}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
