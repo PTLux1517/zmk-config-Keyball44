@@ -13,19 +13,29 @@
 #include <dt-bindings/zmk/mouse.h>
 //#include <input/processors.dtsi>
 
-&lt {
-    tapping-term-ms = <240>;
-    flavor = "balanced";
-    quick-tap-ms = <150>;
-};
-
 &sk {
-   release-after-ms = <2000>;
-   quick-release;
-   lazy;
+    release-after-ms = <2000>;
+    quick-release;
+    lazy;
 };
 
-&caps_word { continue-list = <BACKSPACE DEL SPACE ENTER TAB UNDERSCORE COMMA DOT SEMI QMARK EXCL MINUS APOS>; };
+&caps_word {
+    continue-list = <
+        BACKSPACE
+        DEL
+        SPACE
+        ENTER
+        TAB
+        UNDERSCORE
+        COMMA
+        DOT
+        SEMI
+        QMARK
+        EXCL
+        MINUS
+        APOS
+    >;
+};
 
 / {
 
@@ -59,17 +69,9 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings =
-                <&mt_SK LSHFT LSHFT>,
+                <&kp LSHFT>,
                 <&caps_word>,
                 <&kp CAPS>;
-        };
-        mt_SK: mt_sk {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&sk>;
-            display-name = "Mod-Tap";
-            tapping-term-ms = <80>;
-            flavor = "hold-preferred";
         };
     };
 
@@ -150,7 +152,7 @@
 &kp DEL               &none                 &none                 &none                 &none                 &none                                                             &none                 &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
 &kp LALT              &none                 &none                 &none                 &none                 &none                                                             &none                 &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &none
 &kp LCTRL             &none                 &none                 &none                 &none                 &none                                                             &none                 &mkp MB1              &mkp MB2              &mkp MB3              &mkp MB4              &mkp MB5
-                                            &mo LOWDPI            &mo SCROLL            &mo SYMBLS            &mo DIGITS            &trans                &trans                &trans                                                                                  &trans
+                                            &mo LOWDPI            &mo SCROLL            &none                 &none                 &trans                &trans                &trans                                                                                  &trans
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: SCROLL ------------------------------------------------------------------------------------------------------------------------------------------
