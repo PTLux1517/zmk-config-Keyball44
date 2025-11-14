@@ -480,9 +480,9 @@ parse_config:
     LEFT_SHIFT: $$mdi:apple-keyboard-shift$$
     LSHFT: $$mdi:apple-keyboard-shift$$
     LCMD: $$mdi:apple-keyboard-command$$
-    LG: $$mdi:ubuntu$$
-    LGUI: $$mdi:ubuntu$$
-    LEFT_GUI: $$mdi:ubuntu$$
+    LG: $$mdi:linux$$
+    LGUI: $$mdi:linux$$
+    LEFT_GUI: $$mdi:linux$$
     LEFT_COMMAND: $$mdi:apple-keyboard-command$$
     RCTRL: $$mdi:apple-keyboard-control$$
     RIGHT_CONTROL: $$mdi:apple-keyboard-control$$
