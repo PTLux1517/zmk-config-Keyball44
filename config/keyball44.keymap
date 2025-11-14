@@ -150,7 +150,7 @@
 &kp DEL               &none                 &kp HOME              &kp UP                &kp END               &kp PG_UP                                                         &none                 &none                 &none                 &none                 &none                 &kp BACKSPACE
 &kp LALT              &none                 &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN                                                         &none                 &mkp MB4              &mkp MB5              &none                 &none                 &none
 &kp LCTRL             &none                 &none                 &none                 &none                 &kp DEL                                                           &kp BACKSPACE         &mkp MB1              &mkp MB2              &mkp MB3              &none                 &none
-                                            &mo LOWDPI            &mo SCROLL            &kp C_AC_PASTE        &kp C_AC_COPY         &td_SHFTCAPS          &morph_SPACEUNDER     &kp ENTER                                                                               &trans
+                                            &mo LOWDPI            &mo SCROLL            &mo SYMBLS            &mo DIGITS            &to ALPHAS            &morph_SPACEUNDER     &kp ENTER                                                                               &trans
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: SCROLL ------------------------------------------------------------------------------------------------------------------------------------------
