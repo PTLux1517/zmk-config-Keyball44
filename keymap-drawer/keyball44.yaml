@@ -219,8 +219,8 @@ layers:
   - $$mdi:arrow-right-box$$
   - LOWDPI
   - SCROLL
-  - SYMBLS
-  - DIGITS
+  - {type: none}
+  - {type: none}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
