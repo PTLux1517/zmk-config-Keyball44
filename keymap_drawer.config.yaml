@@ -21,9 +21,20 @@ draw_config:
 
     svg.keymap {
       font-family: Sometype Mono, Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
-      font-size: 22px;
+      font-size: 18px;
       font-weight: bold;
       text-rendering: optimizeLegibility;
+      fill: #777;
+    }
+    
+    /* default key styling */
+    rect.key {
+      fill: #272727;
+    }
+  
+    rect.key, rect.combo {
+      stroke: #111;
+      stroke-width: 1;
     }
     
     /* default key side styling, only used is draw_key_sides is set */
@@ -38,16 +49,23 @@ draw_config:
     
     /* styling for layer labels */
     text.label {
+      font-size: 40px;
       font-weight: bold;
       text-anchor: start;
-      stroke: white;
+      stroke: black;
       stroke-width: 6;
       paint-order: stroke;
+    }
+    text.layer-activator {
+      font-size: 12px;
+      font-weight: bold;
     }
     
     /* styling for combo tap, and key non-tap label text */
     text.combo, text.hold, text.shifted, text.left, text.right {
       font-size: 18px;
+      font-weight: bold;
+      fill: #b8ca2f;
     }
     
     text.hold {
@@ -62,7 +80,7 @@ draw_config:
 
     /* Color accent for held keys */
     rect.held, rect.combo.held {
-      fill: #ffc;
+      fill: #622fca;
     }
 
     /* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
