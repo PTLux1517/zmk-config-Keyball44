@@ -68,8 +68,8 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&sk>;
             display-name = "Mod-Tap";
-            tapping-term-ms = <20>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <80>;
+            flavor = "hold-preferred";
         };
     };
 
@@ -147,10 +147,10 @@
         mouse_button_layer {
             label = "M_BTNS";
             bindings = <
-&kp DEL               &none                 &kp HOME              &kp UP                &kp END               &kp PG_UP                                                         &none                 &none                 &none                 &none                 &none                 &kp BACKSPACE
-&kp LALT              &none                 &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN                                                         &none                 &mkp MB4              &mkp MB5              &none                 &none                 &none
-&kp LCTRL             &none                 &none                 &none                 &none                 &none                                                             &none                 &mkp MB1              &mkp MB2              &mkp MB3              &none                 &none
-                                            &mo LOWDPI            &mo SCROLL            &mo SYMBLS            &mo DIGITS            &to ALPHAS            &trans                &trans                                                                                  &trans
+&kp DEL               &none                 &none                 &none                 &none                 &none                                                             &none                 &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
+&kp LALT              &none                 &none                 &none                 &none                 &none                                                             &none                 &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &none
+&kp LCTRL             &none                 &none                 &none                 &none                 &none                                                             &none                 &mkp MB1              &mkp MB2              &mkp MB3              &mkp MB4              &mkp MB5
+                                            &mo LOWDPI            &mo SCROLL            &mo SYMBLS            &mo DIGITS            &trans                &trans                &trans                                                                                  &trans
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: SCROLL ------------------------------------------------------------------------------------------------------------------------------------------
