@@ -39,7 +39,7 @@ layers:
   - '!'
   - LOWDPI
   - SCROLL
-  - FUNCTS
+  - SYMBLS
   - DIGITS
   - '&td_SHFTCAPS'
   - {t: '$$mdi:keyboard-space$$', s: _}
@@ -84,7 +84,7 @@ layers:
   - $$mdi:keyboard-esc$$
   - {t: (, s: '['}
   - {t: ), s: ']'}
-  - {t: SYMBLS, h: toggle}
+  - FUNCTS
   - {type: held}
   - '&td_SHFTCAPS'
   - {t: '$$mdi:keyboard-space$$', s: _}
@@ -129,8 +129,8 @@ layers:
   - {t: Sft+`, s: Sft+~}
   - LOWDPI
   - SCROLL
-  - {t: ALPHAS, h: toggle}
-  - DIGITS
+  - {type: held}
+  - FUNCTS
   - '&td_SHFTCAPS'
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -175,13 +175,13 @@ layers:
   - LOWDPI
   - SCROLL
   - {type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {type: held}
   - '&td_SHFTCAPS'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   M_BTNS:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - HOME
   - $$mdi:arrow-up-bold$$
@@ -192,7 +192,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-left-bold$$
@@ -219,8 +219,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - LOWDPI
   - SCROLL
-  - PASTE
-  - COPY
+  - AC PASTE
+  - AC COPY
   - '&td_SHFTCAPS'
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -265,7 +265,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {type: held alternate}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -310,7 +310,7 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
