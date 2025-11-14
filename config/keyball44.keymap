@@ -68,7 +68,7 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&sk>;
             display-name = "Mod-Tap";
-            tapping-term-ms = <80>;
+            tapping-term-ms = <20>;
             flavor = "tap-preferred";
         };
     };
