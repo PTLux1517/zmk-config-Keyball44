@@ -31,10 +31,13 @@ draw_config:
     rect.key {
       fill: #272727;
     }
-  
     rect.key, rect.combo {
       stroke: #111;
       stroke-width: 1;
+    }
+    /* color accent for combo boxes */
+    rect.combo, rect.combo-separate {
+      fill: #0f577e;
     }
     
     /* default key side styling, only used is draw_key_sides is set */
@@ -148,7 +151,7 @@ draw_config:
       visibility: hidden;
     }
 
-  shrink_wide_legends: 6
+  shrink_wide_legends: 5
   glyph_tap_size: 18
   glyph_hold_size: 15
   glyph_shifted_size: 15
@@ -162,10 +165,11 @@ draw_config:
   use_local_cache: true
 
 parse_config:
-  mark_alternate_layer_activators: true
-  sticky_label: $$mdi:gesture-tap-hold$$
+  mark_alternate_layer_activators: false
+  sticky_label: stky
+  toggle_label: togl
   trans_legend:
-    tap: $$mdi:transfer$$
+    tap: ▽
     type: trans
 
   raw_binding_map:
@@ -185,6 +189,7 @@ parse_config:
     "&ltq 1 DELETE":
       tap: $$mdi:backspace-reverse-outline$$
       hold: $$mdi:navigation-variant$$
+
     # Home rows
     "&hm LEFT_GUI A":
       tap: 'A'
@@ -211,6 +216,7 @@ parse_config:
     "&hm LG(LS(V)) P":
       tap: 'P'
       shifted: $$mdi:content-copy$$
+
     # Mouse
     "&msc SCRL_UP":
       tap: $$mdi:pan-up$$
@@ -246,26 +252,40 @@ parse_config:
       shifted: $$mdi:mouse$$
     "&mkp LCLK":
       tap: $$mdi:mouse-left-click-outline$$
+    "&mkp MB1":
+      tap: $$mdi:mouse-left-click-outline$$
     "&mkp RCLK":
+      tap: $$mdi:mouse-right-click-outline$$
+    "&mkp MB2":
       tap: $$mdi:mouse-right-click-outline$$
     "&mkp MCLK":
       tap: $$mdi:mouse-scroll-wheel$$
+    "&mkp MB3":
+      tap: $$mdi:mouse-scroll-wheel$$
+    "&mkp MB4":
+      tap: $$mdi:arrow-left-box$$
+    "&mkp MB5":
+      tap: $$mdi:arrow-right-box$$
+
     # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
     "&kt RSHIFT":
       tap: $$mdi:apple-keyboard-shift$$
       hold: $$mdi:toggle-switch$$
+    "&td_SHFTCAPS":
+      tap: $$mdi:apple-keyboard-shift$$
+      hold: $$mdi:apple-keyboard-caps$$
 
     # Empty
     "&none":
-      tap: $$mdi:minus-circle-outline$$
+      tap: ""
       type: none
 
     # Whitespace
     "&bkspc_del":
       type: backspace
       tap: $$mdi:backspace$$
-      shifted: $$mdi:backspace-reverse-outline$$
+      shifted: $$mdi:backspace-reverse$$
 
     # Bluetooth
     "&bt BT_SEL 0":
@@ -300,6 +320,7 @@ parse_config:
       shifted: $$mdi:bluetooth-connect$$
       tap: ""
       hold: $$mdi:arrow-down-bold$$
+
     # Reset
     "&sys_reset":
       type: bootloader
@@ -330,6 +351,14 @@ parse_config:
     LPAR: (
     RIGHT_PARENTHESIS: )
     RPAR: )
+    KP_PLUS:
+      tap: "+"
+    KP_MINUS:
+      tap: "-"
+    KP_MULTIPLY:
+      tap: "*"
+    KP_DIVIDE:
+      tap: "/"
     EQUAL:
       tap: "="
       shifted: "+"
@@ -371,7 +400,8 @@ parse_config:
       tap: "'"
       shifted: '"'
     APOSTROPHE: <
-    APOS: .
+    APOS: "'"
+    LS(APOS): '"'
     DOUBLE_QUOTES: '"'
     DQT: '"'
 
@@ -380,10 +410,8 @@ parse_config:
     PERIOD: '.'
     DOT:
       tap: "."
-      shifted: ">"
     COMMA:
       tap: ","
-      shifted: "<"
     GREATER_THAN: ">"
     GT: ">"
     LEFT_BRACKET:
@@ -391,7 +419,6 @@ parse_config:
       shifted: "{"
     LBKT:
       tap: "["
-      shifted: "{"
     LEFT_BRACE: "{"
     LBRC: "{"
     RIGHT_BRACKET:
@@ -399,12 +426,12 @@ parse_config:
       shifted: "}"
     RBKT:
       tap: "]"
-      shifted: "}"
     RIGHT_BRACE: "}"
     RBRC: "}"
     GRAVE:
       tap: "`"
       shifted: "~"
+    LS(GRAVE): "~"
     TILDE: "~"
     NON_US_HASH: "#"
     NUHS: "#"
@@ -443,16 +470,17 @@ parse_config:
       shifted: ")"
 
     # Modifiers
-    LCTRL: $$mdi:apple-keyboard-control$$
+    LCTRL: "CTRL"
     LEFT_CONTROL: $$mdi:apple-keyboard-control$$
-    LALT: $$mdi:apple-keyboard-option$$
+    LALT: "ALT"
     LEFT_ALT: $$mdi:apple-keyboard-option$$
     LSHIFT: $$mdi:apple-keyboard-shift$$
     LEFT_SHIFT: $$mdi:apple-keyboard-shift$$
     LSHFT: $$mdi:apple-keyboard-shift$$
     LCMD: $$mdi:apple-keyboard-command$$
-    LG: $$mdi:apple-keyboard-command$$
-    LEFT_GUI: $$mdi:apple-keyboard-command$$
+    LG: $$mdi:ubuntu$$
+    LGUI: $$mdi:ubuntu$$
+    LEFT_GUI: $$mdi:ubuntu$$
     LEFT_COMMAND: $$mdi:apple-keyboard-command$$
     RCTRL: $$mdi:apple-keyboard-control$$
     RIGHT_CONTROL: $$mdi:apple-keyboard-control$$
@@ -494,8 +522,8 @@ parse_config:
     RET:
       type: enter
       tap: $$mdi:keyboard-return$$
-    ESC: $$mdi:keyboard-esc$$
-    ESCAPE: $$mdi:keyboard-esc$$
+    ESC: "ESC"
+    ESCAPE: "ESC"
     TAB: $$mdi:keyboard-tab$$
     LS(TAB): $$mdi:keyboard-tab-reverse$$
     SPACE: $$mdi:keyboard-space$$
@@ -505,14 +533,16 @@ parse_config:
     BSPC:
       type: backspace
       tap: $$mdi:backspace$$
-    DELETE: $$mdi:backspace-reverse-outline$$
-    DEL: $$mdi:backspace-reverse-outline$$
+    DELETE: $$mdi:backspace-reverse$$
+    DEL: $$mdi:backspace-reverse$$
 
     # Locks
     CAPSLOCK: $$mdi:apple-keyboard-caps$$
     CAPS: $$mdi:apple-keyboard-caps$$
 
     # Sound
+    K_VOL_UP: $$mdi:volume-plus$$
+    K_VOL_DN: $$mdi:volume-minus$$
     C_MUTE: $$mdi:volume-off$$
     C_VOL_UP: $$mdi:volume-high$$
     C_VOL_DN: $$mdi:volume-low$$
@@ -540,7 +570,8 @@ parse_config:
     C_AL_LOCK: $$mdi:lock$$
     K_CANCEL: $$mdi:close-box$$
     K_FIND: $$mdi:apple-finder$$
-    # Command + 
+
+    # Command +
     LG(A):
       tap: 'A'
       hold: $$mdi:apple-keyboard-command$$
@@ -565,6 +596,7 @@ parse_config:
     LG(V):
       tap: 'V'
       hold: $$mdi:apple-keyboard-command$$
+
     # Zoom
     RG(RS(A)):
       tap: $$mdi:microphone$$
