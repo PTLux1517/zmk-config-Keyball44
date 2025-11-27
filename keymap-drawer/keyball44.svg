@@ -18,6 +18,9 @@
 <svg id="mdi:arrow-right-bold">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-right-bold" viewBox="0 0 24 24"><path d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z" /></svg>
 </svg>
+<svg id="mdi:arrow-right-box">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-right-box" viewBox="0 0 24 24"><path d="M5,21A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19C21,20.11 20.1,21 19,21H5M6,13H14.5L11,16.5L12.42,17.92L18.34,12L12.42,6.08L11,7.5L14.5,11H6V13Z" /></svg>
+</svg>
 <svg id="mdi:arrow-up-bold">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-up-bold" viewBox="0 0 24 24"><path d="M15,20H9V12H4.16L12,4.16L19.84,12H15V20Z" /></svg>
 </svg>
@@ -1417,9 +1420,7 @@ rect.held, rect.combo.held {
 <g transform="translate(812, 168)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB5,</tspan>
-</text>
+<use href="#mdi:arrow-right-box" xlink:href="#mdi:arrow-right-box" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:arrow-right-box"/>
 </g>
 <g transform="translate(140, 210)" class="key held keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held side"/>
