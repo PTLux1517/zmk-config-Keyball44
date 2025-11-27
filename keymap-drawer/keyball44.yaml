@@ -181,44 +181,44 @@ layers:
   - {type: none}
   - {type: held}
   M_BTNS:
-  - $$mdi:backspace-reverse$$
-  - {type: none}
-  - V
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
+  - {type: none}
+  - {type: none}
+  - Ctl+V
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
   - PG UP
   - {t: '$$mdi:backspace$$', type: backspace}
-  - ALT
-  - C
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
+  - {type: none}
+  - Ctl+C
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - PG DN
-  - {type: none}
-  - CTRL
-  - {type: none}
+  - $$mdi:backspace-reverse$$
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
+  - {type: none}
+  - Ctl+X
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:arrow-left-box$$
-  - $$mdi:arrow-right-box$$
-  - {t: LOWDPI, type: held}
-  - {t: SCROLL, type: held}
+  - '&mkp MB5,'
+  - {type: held}
+  - {type: held}
   - {type: none}
   - {type: none}
   - {t: ▽, type: trans}
@@ -321,4 +321,4 @@ combos:
   l: [ALPHAS, DIGITS, SYMBLS, M_BTNS, SCROLL, LOWDPI]
 - p: [36, 37]
   k: M_BTNS
-  l: [ALPHAS, DIGITS, SYMBLS, M_BTNS, SCROLL, LOWDPI]
+  l: [ALPHAS, DIGITS, SYMBLS, SCROLL, LOWDPI]
