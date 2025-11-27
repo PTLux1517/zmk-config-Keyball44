@@ -13,7 +13,7 @@ layers:
   - O
   - Y
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: ALT, h: stky}
+  - ALT
   - C
   - S
   - T
@@ -25,7 +25,7 @@ layers:
   - A
   - I
   - {t: ;, s: ':'}
-  - {t: CTRL, h: stky}
+  - CTRL
   - W
   - B
   - M
@@ -44,7 +44,7 @@ layers:
   - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-caps$$'}
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: M_BTNS, h: togl}
+  - M_BTNS
   DIGITS:
   - $$mdi:backspace-reverse$$
   - ^
@@ -89,7 +89,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: M_BTNS, h: togl}
+  - M_BTNS
   SYMBLS:
   - $$mdi:backspace-reverse$$
   - PG UP
@@ -134,7 +134,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: M_BTNS, h: togl}
+  - M_BTNS
   FUNCTS:
   - {t: '$$mdi:apple-keyboard-shift$$', h: stky}
   - {type: none}
@@ -183,7 +183,7 @@ layers:
   M_BTNS:
   - $$mdi:backspace-reverse$$
   - {type: none}
-  - {type: none}
+  - V
   - {type: none}
   - {type: none}
   - {type: none}
@@ -194,7 +194,7 @@ layers:
   - PG UP
   - {t: '$$mdi:backspace$$', type: backspace}
   - ALT
-  - {type: none}
+  - C
   - {type: none}
   - {type: none}
   - {type: none}
@@ -224,7 +224,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   SCROLL:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
