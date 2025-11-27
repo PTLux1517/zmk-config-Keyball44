@@ -44,7 +44,7 @@ layers:
   - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-caps$$'}
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - M_BTNS
+  - FUNCTS
   DIGITS:
   - $$mdi:backspace-reverse$$
   - ^
@@ -84,12 +84,12 @@ layers:
   - ESC
   - {t: (, s: '['}
   - {t: ), s: ']'}
-  - FUNCTS
+  - {type: none}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - M_BTNS
+  - FUNCTS
   SYMBLS:
   - $$mdi:backspace-reverse$$
   - PG UP
@@ -130,13 +130,13 @@ layers:
   - LOWDPI
   - SCROLL
   - {type: held}
+  - {type: none}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - FUNCTS
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - M_BTNS
   FUNCTS:
-  - {t: '$$mdi:apple-keyboard-shift$$', h: stky}
+  - {type: none}
   - {type: none}
   - F7
   - F8
@@ -148,7 +148,7 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - {t: ALT, h: stky}
+  - {type: none}
   - {type: none}
   - F4
   - F5
@@ -160,26 +160,26 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - {t: CTRL, h: stky}
+  - {type: none}
   - {type: none}
   - F1
   - F2
   - F3
   - F12
   - {type: none}
+  - CTRL
+  - ALT
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
-  - LOWDPI
-  - SCROLL
-  - {type: held}
-  - {type: held}
-  - {t: ▽, type: trans}
   - {type: none}
   - {type: none}
   - {t: ▽, type: trans}
+  - $$mdi:apple-keyboard-shift$$
+  - {type: none}
+  - {type: held}
   M_BTNS:
   - $$mdi:backspace-reverse$$
   - {type: none}
@@ -217,14 +217,14 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:arrow-left-box$$
   - $$mdi:arrow-right-box$$
-  - LOWDPI
-  - SCROLL
+  - {t: LOWDPI, type: held}
+  - {t: SCROLL, type: held}
   - {type: none}
   - {type: none}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   SCROLL:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -318,4 +318,7 @@ layers:
 combos:
 - p: [41, 42]
   k: $$mdi:keyboard-tab$$
+  l: [ALPHAS, DIGITS, SYMBLS, M_BTNS, SCROLL, LOWDPI]
+- p: [36, 37]
+  k: M_BTNS
   l: [ALPHAS, DIGITS, SYMBLS, M_BTNS, SCROLL, LOWDPI]
