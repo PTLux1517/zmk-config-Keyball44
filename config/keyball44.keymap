@@ -86,7 +86,7 @@
         combo_mouse_buttons_layer {
             timeout-ms = <100>;
             key-positions = <36 37>;
-            layers = <ALPHAS DIGITS SYMBLS M_BTNS SCROLL LOWDPI>;
+            layers = <ALPHAS DIGITS SYMBLS SCROLL LOWDPI>;
             bindings = <&mo M_BTNS>;
         };
     };
@@ -155,10 +155,10 @@
         mouse_button_layer {
             label = "M_BTNS";
             bindings = <
-&kp DEL               &none                 &kp V                 &none                 &none                 &none                                                             &none                 &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
-&kp LALT              &kp C                 &none                 &none                 &none                 &none                                                             &none                 &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &none
-&kp LCTRL             &none                 &none                 &none                 &none                 &none                                                             &none                 &mkp MB1              &mkp MB2              &mkp MB3              &mkp MB4              &mkp MB5
-                                            &mo LOWDPI            &mo SCROLL            &none                 &none                 &trans                &trans                &trans                                                                                  &trans
+&none                 &none                 &none                 &none                 &none                 &none                                                             &kp LC(V)             &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
+&none                 &none                 &none                 &none                 &none                 &none                                                             &kp LC(C)             &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &kp DEL
+&none                 &none                 &none                 &none                 &none                 &none                                                             &kp LC(X)             &mkp MB1              &mkp MB2              &mkp MB3              &mkp MB4              &mkp MB5,
+                                            &trans                &trans                &none                 &none                 &trans                &trans                &trans                                                                                  &trans
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: SCROLL ------------------------------------------------------------------------------------------------------------------------------------------
