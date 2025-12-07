@@ -7,11 +7,17 @@
 #define LOWDPI 6
 
 #include <behaviors/mouse_keys.dtsi>
+#include <behaviors/unicode.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 //#include <input/processors.dtsi>
+
+&uc {
+    default-mode = <UC_MODE_LINUX>;
+    minimum-length = <0>;
+};
 
 &sl {
     release-after-ms = <5000>;
@@ -60,10 +66,10 @@
         };
 
         // --------------- NUMPAD ----------------
-        morph_JUST0: morph_just_zero {
+        morph_HEX0: morph_hex_zero {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp N0>;
+            bindings = <&kp N0>, <&macro_hex_pfx>;
             mods = <(MOD_LSFT)>;
         };
         morph_LBRC1: morph_leftbrace_one {
@@ -282,8 +288,14 @@
         combo_tab {
             timeout-ms = <100>;
             key-positions = <41 42>;
-            layers = <ALPHAS DIGITS>;
+            layers = <ALPHAS>;
             bindings = <&kp TAB>;
+        };
+        combo_emdash {
+            timeout-ms = <100>;
+            key-positions = <41 42>;
+            layers = <DIGITS>;
+            bindings = <&uc 0x2014 0>;
         };
         combo_functions_layer {
             timeout-ms = <20>;
@@ -298,6 +310,15 @@
             bindings = <&mkp MB3>;
         };
     };
+
+    macros {
+        macro_hex_pfx: macro_hex_pfx {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp N0>, <&macro_tap &kp X>;
+        };
+    };
+
     // key-position reference:
     // 0   1  2  3  4  5          6  7  8  9 10 11
     // 12 13 14 15 16 17         18 19 20 21 22 23
@@ -308,7 +329,7 @@
         compatible = "zmk,keymap";
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: ALPHAS ------------------------------------------------------------------------------------------------------------------------------------------
         default_layer {
-            label = "ALPHAS";
+            label = "𝜶:ALPHAS";
             bindings = <
 &kp DEL               &kp G                 &kp V                 &kp D                 &kp F                 &kp J                                                             &kp Q                 &kp R                 &kp U                 &kp O                 &kp Y                 &kp BACKSPACE
 &kp LALT              &kp C                 &kp S                 &kp T                 &kp H                 &kp APOS                                                          &kp L                 &kp N                 &kp E                 &kp A                 &kp I                 &kp SEMI
@@ -318,17 +339,17 @@
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: DIGITS ------------------------------------------------------------------------------------------------------------------------------------------
         number_layer {
-            label = "DIGITS";
+            label = "ℤ:DIGITS";
             bindings = <
 &kp DEL               &kp LC(X)             &morph_LBKT7          &morph_RBKT8          &morph_CARET9         &morph_MULTIPLYHASH                                               &morph_PLUSAMPS       &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
 &kp LC(V)             &kp LC(C)             &morph_LT4            &morph_GT5            &morph_EQUAL6         &morph_DIVIDEBSLH                                                 &morph_MINUSPIPE      &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &kp SEMI
-&kp AT                &morph_JUST0          &morph_LBRC1          &morph_RBRC2          &morph_EXCL3          &morph_DOTDOLLAR                                                  &morph_COMMAPERCENT   &morph_VOLDNPREV      &morph_MUTEPLAYPAUSE  &morph_VOLUPNEXT      &kp LGUI              &kp ESC
+&kp AT                &morph_HEX0           &morph_LBRC1          &morph_RBRC2          &morph_EXCL3          &morph_DOTDOLLAR                                                  &morph_COMMAPERCENT   &morph_VOLDNPREV      &morph_MUTEPLAYPAUSE  &morph_VOLUPNEXT      &kp LGUI              &kp ESC
                                             &kp LPAR              &kp RPAR              &kp GRAVE             &trans                &trans                &morph_SPACEUNDER     &trans                                                                                  &mo M_BTNS
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: SYMBLS ------------------------------------------------------------------------------------------------------------------------------------------
         symbol_layer {
-            label = "SYMBLS";
+            label = "±:SYMBLS";
             bindings = <
 &none                 &none                 &none                 &none                 &none                 &none                                                             &none                 &none                 &none                 &none                 &none                 &none
 &none                 &none                 &none                 &none                 &none                 &none                                                             &none                 &none                 &none                 &none                 &none                 &none
@@ -338,7 +359,7 @@
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: FUNCTS ------------------------------------------------------------------------------------------------------------------------------------------
         function_layer {
-            label = "FUNCTS";
+            label = "𝒇:FUNCTS";
             bindings = <
 &none                 &none                 &morph_F07_F17        &morph_F08_F18        &morph_F09_F19        &morph_F21                                                        &none                 &none                 &none                 &none                 &none                 &none
 &none                 &none                 &morph_F04_F14        &morph_F05_F15        &morph_F06_F16        &morph_F22                                                        &none                 &none                 &none                 &none                 &none                 &none
@@ -348,7 +369,7 @@
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: M_BTNS ------------------------------------------------------------------------------------------------------------------------------------------
         mouse_button_layer {
-            label = "M_BTNS";
+            label = "🖰:M_BTNS";
             bindings = <
 &kp DEL               &kp LC(X)             &none                 &none                 &none                 &kp BACKSPACE                                                     &kp PG_UP             &kp HOME              &kp UP                &kp END               &none                 &none
 &kp LC(V)             &kp LC(C)             &kp LC(S)             &none                 &none                 &none                                                             &kp PG_DN             &kp LEFT              &kp DOWN              &kp RIGHT             &none                 &none
@@ -358,7 +379,7 @@
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: SCROLL ------------------------------------------------------------------------------------------------------------------------------------------
         scroll_layer {
-            label = "SCROLL";
+            label = "🡙:SCROLL";
             bindings = <
 &trans                &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans                &trans
 &trans                &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans                &trans
@@ -368,7 +389,7 @@
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: LOWDPI ------------------------------------------------------------------------------------------------------------------------------------------
         snipe_layer {
-            label = "LOWDPI";
+            label = "🕀:LOWDPI";
             bindings = <
 &trans                &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans                &trans
 &trans                &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans                &trans
