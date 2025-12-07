@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: keyball44}
 layers:
-  ALPHAS:
+  𝜶:ALPHAS:
   - $$mdi:backspace-reverse$$
   - G
   - V
@@ -40,12 +40,12 @@ layers:
   - (
   - )
   - {t: '`', s: '~'}
-  - DIGITS
+  - ℤ
   - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-caps$$'}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - M_BTNS
-  DIGITS:
+  - 🖰
+  ℤ:DIGITS:
   - $$mdi:backspace-reverse$$
   - Ctl+X
   - {t: '7', s: '['}
@@ -71,26 +71,26 @@ layers:
   - PG DN
   - {t: ;, s: ':'}
   - '@'
-  - {t: '0', s: '0'}
+  - {t: '0', s: '&macro_hex_pfx'}
   - {t: '1', s: '{'}
   - {t: '2', s: '}'}
   - {t: '3', s: '!'}
   - {t: ., s: $}
   - {t: ',', s: '%'}
   - {t: '$$mdi:volume-low$$', s: '$$mdi:skip-previous$$'}
-  - {t: '$$mdi:volume-off$$', s: PLAY PAUSE}
+  - {t: '$$mdi:volume-off$$', s: '$$mdi:play-pause$$'}
   - {t: '$$mdi:volume-high$$', s: '$$mdi:skip-next$$'}
   - $$mdi:linux$$
   - ESC
   - (
   - )
   - {t: '`', s: '~'}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: ▽, type: trans}
-  - M_BTNS
-  SYMBLS:
+  - 🖰
+  ±:SYMBLS:
   - {type: none}
   - {type: none}
   - {type: none}
@@ -135,7 +135,7 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  FUNCTS:
+  𝒇:FUNCTS:
   - {type: none}
   - {type: none}
   - {t: F7, s: F17}
@@ -172,15 +172,15 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - {type: held}
-  - {type: held}
+  - {type: none}
+  - {type: none}
   - {type: none}
   - {s: F24}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-shift$$
   - {type: none}
   - {type: none}
-  M_BTNS:
+  🖰:M_BTNS:
   - $$mdi:backspace-reverse$$
   - Ctl+X
   - {type: none}
@@ -213,9 +213,9 @@ layers:
   - {type: none}
   - ESC
   - $$mdi:mouse-left-click-outline$$
+  - 🡙
   - $$mdi:mouse-right-click-outline$$
-  - LOWDPI
-  - SCROLL
+  - 🕀
   - {type: none}
   - {type: none}
   - {type: none}
@@ -224,9 +224,8 @@ layers:
   - {t: ▽, type: trans}
   - $$mdi:arrow-left-box$$
   - $$mdi:arrow-right-box$$
-  - {type: held}
-  SCROLL:
   - {t: ▽, type: trans}
+  🡙:SCROLL:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -260,7 +259,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -269,11 +267,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
-  LOWDPI:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  🕀:LOWDPI:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -304,7 +301,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -314,14 +310,21 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [41, 42]
   k: $$mdi:keyboard-tab$$
-  l: [ALPHAS, DIGITS]
+  l: ['𝜶:ALPHAS']
+- p: [41, 42]
+  k: '&uc 0x2014 0'
+  l: ['ℤ:DIGITS']
 - p: [36, 37]
-  k: {t: FUNCTS, h: stky}
-  l: [ALPHAS]
+  k: 𝒇
+  l: ['𝜶:ALPHAS']
 - p: [31, 32]
   k: $$mdi:mouse-scroll-wheel$$
-  l: [M_BTNS]
+  l: ['🖰:M_BTNS']
