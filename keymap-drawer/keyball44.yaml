@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: keyball44}
 layers:
-  𝜶:ALPHAS:
+  𝜶_ALPHAS:
   - $$mdi:backspace-reverse$$
   - G
   - V
@@ -45,9 +45,9 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - 🖰
-  ℤ:DIGITS:
+  ℤ_DIGITS:
   - $$mdi:backspace-reverse$$
-  - Ctl+X
+  - $$mdi:content-cut$$
   - {t: '7', s: '['}
   - {t: '8', s: ']'}
   - {t: '9', s: ^}
@@ -58,8 +58,8 @@ layers:
   - END
   - PG UP
   - {t: '$$mdi:backspace$$', type: backspace}
-  - Ctl+V
-  - Ctl+C
+  - $$mdi:content-paste$$
+  - $$mdi:content-copy$$
   - {t: '4', s: <}
   - {t: '5', s: '>'}
   - {t: '6', s: '='}
@@ -71,7 +71,7 @@ layers:
   - PG DN
   - {t: ;, s: ':'}
   - '@'
-  - {t: '0', s: '&macro_hex_pfx'}
+  - {t: '0', s: 0x}
   - {t: '1', s: '{'}
   - {t: '2', s: '}'}
   - {t: '3', s: '!'}
@@ -90,7 +90,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', s: _}
   - {t: ▽, type: trans}
   - 🖰
-  ±:SYMBLS:
+  ±_SYMBLS:
   - {type: none}
   - {type: none}
   - {type: none}
@@ -135,7 +135,7 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  𝒇:FUNCTS:
+  𝒇_FUNCTS:
   - {type: none}
   - {type: none}
   - {t: F7, s: F17}
@@ -180,9 +180,9 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - {type: none}
   - {type: none}
-  🖰:M_BTNS:
+  🖰_M-BTNS:
   - $$mdi:backspace-reverse$$
-  - Ctl+X
+  - $$mdi:content-cut$$
   - {type: none}
   - {type: none}
   - {type: none}
@@ -193,9 +193,9 @@ layers:
   - END
   - {type: none}
   - {type: none}
-  - Ctl+V
-  - Ctl+C
-  - Ctl+S
+  - $$mdi:content-paste$$
+  - $$mdi:content-copy$$
+  - $$mdi:content-save$$
   - {type: none}
   - {type: none}
   - {type: none}
@@ -225,7 +225,7 @@ layers:
   - $$mdi:arrow-left-box$$
   - $$mdi:arrow-right-box$$
   - {t: ▽, type: trans}
-  🡙:SCROLL:
+  🡙_SCROLL:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -270,7 +270,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  🕀:LOWDPI:
+  🕀_LOWDPI:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -318,13 +318,13 @@ layers:
 combos:
 - p: [41, 42]
   k: $$mdi:keyboard-tab$$
-  l: ['𝜶:ALPHAS']
+  l: [𝜶_ALPHAS]
 - p: [41, 42]
-  k: '&uc 0x2014 0'
-  l: ['ℤ:DIGITS']
+  k: —
+  l: [ℤ_DIGITS]
 - p: [36, 37]
   k: 𝒇
-  l: ['𝜶:ALPHAS']
+  l: [𝜶_ALPHAS]
 - p: [31, 32]
   k: $$mdi:mouse-scroll-wheel$$
-  l: ['🖰:M_BTNS']
+  l: [🖰_M-BTNS]
