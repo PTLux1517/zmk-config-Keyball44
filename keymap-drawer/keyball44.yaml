@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: keyball44}
 layers:
   𝜶_ALPHAS:
-  - $$mdi:backspace-reverse$$
+  - ⌦
   - G
   - V
   - D
@@ -12,8 +12,8 @@ layers:
   - U
   - O
   - Y
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - ALT
+  - ⌫
+  - ⎇
   - C
   - S
   - T
@@ -25,7 +25,7 @@ layers:
   - A
   - I
   - {t: ;, s: ':'}
-  - CTRL
+  - ⎈
   - W
   - B
   - M
@@ -33,42 +33,42 @@ layers:
   - K
   - Z
   - X
-  - {t: ',', s: ','}
-  - {t: ., s: .}
+  - ','
+  - .
   - '?'
   - '!'
   - (
   - )
   - {t: '`', s: '~'}
   - ℤ
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-caps$$'}
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: ⇧, h: ⇪}
+  - ␣
+  - ↵
   - 🖰
   ℤ_DIGITS:
-  - $$mdi:backspace-reverse$$
-  - $$mdi:content-cut$$
+  - ⌦
+  - ✀
   - {t: '7', s: '['}
   - {t: '8', s: ']'}
   - {t: '9', s: ^}
   - {t: '*', s: '#'}
   - {t: +, s: '&'}
-  - HOME
-  - $$mdi:arrow-up-bold$$
-  - END
-  - PG UP
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:content-paste$$
-  - $$mdi:content-copy$$
+  - ↤
+  - ▲
+  - ↦
+  - ↥
+  - ⌫
+  - 📋︎
+  - 🗐
   - {t: '4', s: <}
   - {t: '5', s: '>'}
   - {t: '6', s: '='}
   - {t: /, s: \}
   - {t: '-', s: '|'}
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
-  - PG DN
+  - ◀
+  - ▼
+  - ▶
+  - ↧
   - {t: ;, s: ':'}
   - '@'
   - {t: '0', s: 0x}
@@ -77,17 +77,17 @@ layers:
   - {t: '3', s: '!'}
   - {t: ., s: $}
   - {t: ',', s: '%'}
-  - {t: '$$mdi:volume-low$$', s: '$$mdi:skip-previous$$'}
-  - {t: '$$mdi:volume-off$$', s: '$$mdi:play-pause$$'}
-  - {t: '$$mdi:volume-high$$', s: '$$mdi:skip-next$$'}
-  - $$mdi:linux$$
-  - ESC
+  - {t: 🕩, s: ⏮}
+  - {t: 🕨, s: ⏯}
+  - {t: 🕪, s: ⏭}
+  - 🐧
+  - ⎋
   - (
   - )
   - {t: '`', s: '~'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '$$mdi:keyboard-space$$', s: _}
+  - {t: ␣, s: _}
   - {t: ▽, type: trans}
   - 🖰
   ±_SYMBLS:
@@ -167,8 +167,8 @@ layers:
   - {t: F3, s: F13}
   - {s: F23}
   - {type: none}
-  - CTRL
-  - ALT
+  - ⎈
+  - ⎇
   - {type: none}
   - {type: none}
   - {type: none}
@@ -176,42 +176,42 @@ layers:
   - {type: none}
   - {type: none}
   - {s: F24}
-  - $$mdi:apple-keyboard-shift$$
-  - $$mdi:apple-keyboard-shift$$
+  - ⇧
+  - ⇧
   - {type: none}
   - {type: none}
   🖰_M-BTNS:
-  - $$mdi:backspace-reverse$$
-  - $$mdi:content-cut$$
+  - ⌦
+  - ✀
   - {type: none}
   - {type: none}
   - {type: none}
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - PG UP
-  - HOME
-  - $$mdi:arrow-up-bold$$
-  - END
+  - ⌫
+  - ↥
+  - ↤
+  - ▲
+  - ↦
   - {type: none}
   - {type: none}
-  - $$mdi:content-paste$$
-  - $$mdi:content-copy$$
-  - $$mdi:content-save$$
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - PG DN
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
+  - 📋︎
+  - 🗐
+  - 🖫
   - {type: none}
   - {type: none}
   - {type: none}
-  - {type: none}
+  - ↧
+  - ◀
+  - ▼
+  - ▶
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
-  - ESC
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - ⎋
   - $$mdi:mouse-left-click-outline$$
   - 🡙
   - $$mdi:mouse-right-click-outline$$
@@ -317,7 +317,7 @@ layers:
   - {t: ▽, type: trans}
 combos:
 - p: [41, 42]
-  k: $$mdi:keyboard-tab$$
+  k: ↹
   l: [𝜶_ALPHAS]
 - p: [41, 42]
   k: —
@@ -325,6 +325,6 @@ combos:
 - p: [36, 37]
   k: 𝒇
   l: [𝜶_ALPHAS]
-- p: [31, 32]
+- p: [31, 32, 33]
   k: $$mdi:mouse-scroll-wheel$$
   l: [🖰_M-BTNS]
