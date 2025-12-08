@@ -188,48 +188,6 @@ parse_config:
       tap: 🡙
     "&mo LOWDPI":
       tap: 🕀
-    "&ltq 1 BACKSPACE":
-      tap:  $$mdi:backspace$$
-      hold: '$$mdi:navigation-variant$$'
-    "&ltq 3 TAB":
-      tap: $$mdi:keyboard-tab$$
-      hold: $$mdi:numeric$$
-    "&ltq 2 SPACE":
-      tap: $$mdi:keyboard-space$$
-      hold: $$mdi:symbol$$
-    "&ltq 3 ENTER":
-      tap: $$mdi:keyboard-return$$
-      hold: $$mdi:numeric$$
-    "&ltq 1 DELETE":
-      tap: $$mdi:backspace-reverse-outline$$
-      hold: $$mdi:navigation-variant$$
-
-    # Home rows
-    "&hm LEFT_GUI A":
-      tap: 'A'
-      shifted: $$mdi:apple-keyboard-command$$
-    "&hm LEFT_ALT S":
-      tap: 'S'
-      shifted: $$mdi:apple-keyboard-option$$
-    "&hm LEFT_CONTROL D":
-      tap: 'D'
-      shifted: $$mdi:apple-keyboard-control$$
-    "&hm LEFT_SHIFT F":
-      tap: 'F'
-      shifted: $$mdi:apple-keyboard-shift$$
-    "&hm RIGHT_SHIFT J":
-      tap: 'J'
-      shifted: $$mdi:apple-keyboard-shift$$
-    "&hm RIGHT_CONTROL K":
-      tap: 'K'
-      shifted: $$mdi:apple-keyboard-control$$
-    "&hm RIGHT_ALT L":
-      tap: 'L'
-      shifted: $$mdi:apple-keyboard-option$$
-    # self behaviors
-    "&hm LG(LS(V)) P":
-      tap: 'P'
-      shifted: $$mdi:content-copy$$
 
     # Mouse
     "&msc SCRL_UP":
@@ -284,7 +242,7 @@ parse_config:
     # Modifiers
     "&td_SHFTCAPS":
       tap: ⇧
-      hold: $$mdi:apple-keyboard-caps$$
+      hold: ⇪
     "&macro_hex_pfx":
       tap: '0x'
     "&uc 0x2014 0":
@@ -416,7 +374,7 @@ parse_config:
     LGUI: 🐧
     RGUI: 🐧
 
-    LC(C): ⧉
+    LC(C): 🗐
     LC(X): ✀
     LC(V): 📋︎
     LC(S): 🖫
@@ -430,12 +388,12 @@ parse_config:
     LEFT: ◀
     RIGHT: ▶
     RIGHT_ARROW: ▶
-    HOME: ⇤
-    END: ⇥
-    PG_UP: ⍐
-    PAGE_UP: ⍐
-    PG_DN: ⍗
-    PAGE_DOWN: ⍗
+    HOME: ↤
+    END: ↦
+    PG_UP: ↥
+    PAGE_UP: ↥
+    PG_DN: ↧
+    PAGE_DOWN: ↧
     INSERT: ⎀
 
     # Whitespace
@@ -470,3 +428,16 @@ parse_config:
       key:
         shifted: ":"
         hold: ";"
+
+    combo_tab:
+      align: "mid"
+
+    combo_emdash:
+      align: "mid"
+
+    combo_functions_layer:
+      align: "mid"
+
+    combo_middle_click:
+      align: "bottom"
+      offset: 2.0
