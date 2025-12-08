@@ -303,7 +303,7 @@
             layers = <ALPHAS>;
             bindings = <&sl FUNCTS>;
         };
-        combo_midlde_click {
+        combo_middle_click {
             timeout-ms = <100>;
             key-positions = <31 32 33>;
             layers = <M_BTNS>;
