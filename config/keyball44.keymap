@@ -369,7 +369,7 @@
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: M_BTNS ------------------------------------------------------------------------------------------------------------------------------------------
         mouse_button_layer {
-            label = "🖰_M_BTNS";
+            label = "🖰_M-BTNS";
             bindings = <
 &kp DEL               &kp LC(X)             &none                 &none                 &none                 &kp BACKSPACE                                                     &kp PG_UP             &kp HOME              &kp UP                &kp END               &none                 &none
 &kp LC(V)             &kp LC(C)             &kp LC(S)             &none                 &none                 &none                                                             &kp PG_DN             &kp LEFT              &kp DOWN              &kp RIGHT             &none                 &none

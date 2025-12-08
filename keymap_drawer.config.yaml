@@ -230,14 +230,6 @@ parse_config:
     "&hm LG(LS(V)) P":
       tap: 'P'
       shifted: $$mdi:content-copy$$
-    LC(C):
-      tap: $$mdi:content-copy$$
-    LC(X):
-      tap: $$mdi:content-cut$$
-    LC(V):
-      tap: $$mdi:content-paste$$
-    LC(S):
-      tap: $$mdi:content-save$$
 
     # Mouse
     "&msc SCRL_UP":
@@ -297,6 +289,10 @@ parse_config:
     "&td_SHFTCAPS":
       tap: $$mdi:apple-keyboard-shift$$
       hold: $$mdi:apple-keyboard-caps$$
+    "&macro_hex_pfx":
+      tap: '0x'
+    "&uc 0x2014 0":
+      tap: —
 
     # Empty
     "&none":
@@ -526,6 +522,14 @@ parse_config:
     INSERT:
        tap: 'Ins'
        shifted: ''
+    LC(C):
+      tap: $$mdi:content-copy$$
+    LC(X):
+      tap: $$mdi:content-cut$$
+    LC(V):
+      tap: $$mdi:content-paste$$
+    LC(S):
+      tap: $$mdi:content-save$$
     # "Meh" key
     LS(LC(LALT)): $$mdi:star-three-points$$
 

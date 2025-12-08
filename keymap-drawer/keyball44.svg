@@ -283,6 +283,10 @@ rect.held, rect.combo.held {
   opacity: 1.0;
 }
 
+.momentary-layer-key-text {
+  color: red;
+}
+
 /* Toggle */
 .toggle.shifted {
   translate: -10px 12px;
