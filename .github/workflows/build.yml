@@ -2,9 +2,9 @@ on:
   push:
     # be aware of limited YAML anchor syntax support in GH Actions. See https://frenck.dev/github-actions-yaml-anchors-aliases-merge-keys/
     paths-ignore: &PATHS_IGNORE
-      - 'workflows/keymap_drawer.yml'
-      - 'config/keyball44.json'
-      - 'keymap-drawer/*'
+      - '**/keymap_drawer.yml'
+      - '**/keyball44.json'
+      - 'keymap-drawer/**'
       - '.gitignore'
       - 'keymap_drawer.config.yaml'
       - 'README.md'
