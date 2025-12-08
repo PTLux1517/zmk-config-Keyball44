@@ -1,4 +1,17 @@
-on: [push, pull_request, workflow_dispatch]
+ignore_paths: &SHARED_IGNORE_PATHS
+  - 'workflows/keymap_drawer.yml'
+  - 'config/boards/shields/keyball44.json'
+  - 'keymap-drawer/*'
+  - '.gitignore'
+  - 'keymap_drawer.config.yaml'
+  - 'README.md'
+
+on:
+  push:
+    paths-ignore: *SHARED_IGNORE_PATHS
+  pull_request:
+    paths-ignore: *SHARED_IGNORE_PATHS
+  workflow_dispatch:
 
 jobs:
   build:
