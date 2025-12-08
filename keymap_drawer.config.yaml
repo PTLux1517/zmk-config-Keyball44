@@ -282,21 +282,17 @@ parse_config:
       tap: $$mdi:arrow-right-box$$
 
     # Modifiers
-    "&caps_word": $$mdi:alpha-w-box$$
-    "&kt RSHIFT":
-      tap: $$mdi:apple-keyboard-shift$$
-      hold: $$mdi:toggle-switch$$
     "&td_SHFTCAPS":
-      tap: $$mdi:apple-keyboard-shift$$
+      tap: ⇧
       hold: $$mdi:apple-keyboard-caps$$
     "&macro_hex_pfx":
       tap: '0x'
     "&uc 0x2014 0":
       tap: —
-    "morph_JUSTDOT":
+    "&morph_JUSTDOT":
       tap: '.'
       shifted: ''
-    "morph_JUSTCOMMA":
+    "&morph_JUSTCOMMA":
       tap: ','
       shifted: ''
 
@@ -304,53 +300,6 @@ parse_config:
     "&none":
       tap: ""
       type: none
-
-    # Whitespace
-    "&bkspc_del":
-      type: backspace
-      tap: $$mdi:backspace$$
-      shifted: $$mdi:backspace-reverse$$
-
-    # Bluetooth
-    "&bt BT_SEL 0":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 1
-    "&bt BT_SEL 1":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 2
-    "&bt BT_SEL 2":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 3
-    "&bt BT_SEL 3":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 4
-    "&bt BT_SEL 4":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 5
-    "&out OUT_TOG":
-      shifted: $$mdi:usb$$
-      tap: $$mdi:toggle-switch$$
-      hold: $$mdi:bluetooth$$
-    "&bt BT_PRV":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: $$mdi:arrow-up-bold$$
-    "&bt BT_NXT":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: $$mdi:arrow-down-bold$$
-
-    # Reset
-    "&sys_reset":
-      type: bootloader
-      tap: $$mdi:backup-restore$$
-    "&bootloader":
-      tap: $$mdi:progress-download$$
 
   # ZMK
   zmk_keycode_map:
@@ -361,55 +310,39 @@ parse_config:
     AT: "@"
     HASH: "#"
     POUND: "#"
-    DOLLAR: $
-    DLLR: $
+    DOLLAR: "$"
+    DLLR: "$"
     PERCENT: "%"
     PRCNT: "%"
-    CARET: ^
+    CARET: "^"
     AMPERSAND: "&"
     AMPS: "&"
     ASTERISK: "*"
     ASTRK: "*"
     STAR: "*"
-    LEFT_PARENTHESIS: (
-    LPAR: (
-    RIGHT_PARENTHESIS: )
-    RPAR: )
-    KP_PLUS:
-      tap: "+"
-    KP_MINUS:
-      tap: "-"
-    KP_MULTIPLY:
-      tap: "*"
-    KP_DIVIDE:
-      tap: "/"
-    EQUAL:
-      tap: "="
-      shifted: "+"
-    PLUS: +
-    MINUS:
-      tap: "-"
-      shifted: "_"
-    UNDERSCORE: _
-    UNDER: _
-    SLASH:
-      tap: "/"
-      shifted: "?"
-    FSLH:
-      tap: "/"
-      shifted: "?"
+    LEFT_PARENTHESIS: "("
+    LPAR: "("
+    RIGHT_PARENTHESIS: ")"
+    RPAR: ")"
+    KP_PLUS: "+"
+    KP_MINUS: "-"
+    KP_MULTIPLY: "*"
+    KP_DIVIDE: "/"
+    EQUAL: "="
+    PLUS: "+"
+    MINUS: "-"
+    UNDERSCORE: "_"
+    UNDER: "_"
+    SLASH: "/"
+    FSLH: "/"
     QUESTION: "?"
     QMARK: "?"
-    BACKSLASH:
-      tap: '\'
-      shifted: "|"
-    BSLH:
-      tap: '\'
-      shifted: "|"
+    BACKSLASH: '\'
+    BSLH: '\'
+    NON_US_BACKSLASH: '\'
+    NON_US_BSLH: '\'
     PIPE: "|"
-    NON_US_BACKSLASH: \
     PIPE2: "|"
-    NON_US_BSLH: "|"
     SEMICOLON:
       tap: ";"
       shifted: ":"
@@ -423,37 +356,28 @@ parse_config:
     SQT:
       tap: "'"
       shifted: '"'
-    APOSTROPHE: "'"
+    APOSTROPHE:
+      tap: "'"
+      shifted: '"'
     APOS:
       tap: "'"
       shifted: '"'
     LS(APOS): '"'
     DOUBLE_QUOTES: '"'
     DQT: '"'
-
-    LESS_THAN: <
-    LT: <
+    LESS_THAN: "<"
+    LT: "<"
     PERIOD: '.'
-    DOT:
-      tap: "."
-      shifted: ""
-    COMMA:
-      tap: ","
-      shifted: ""
+    DOT: "."
+    COMMA: ","
     GREATER_THAN: ">"
     GT: ">"
-    LEFT_BRACKET:
-      tap: "["
-      shifted: "{"
-    LBKT:
-      tap: "["
+    LEFT_BRACKET: "["
+    LBKT: "["
     LEFT_BRACE: "{"
     LBRC: "{"
-    RIGHT_BRACKET:
-      tap: "]"
-      shifted: "}"
-    RBKT:
-      tap: "]"
+    RIGHT_BRACKET: "]"
+    RBKT:  "]"
     RIGHT_BRACE: "}"
     RBRC: "}"
     GRAVE:
@@ -461,76 +385,41 @@ parse_config:
       shifted: "~"
     LS(GRAVE): "~"
     TILDE: "~"
+    TILDE2: "~"
     NON_US_HASH: "#"
     NUHS: "#"
-    TILDE2: "~"
 
     # Numbers
-    N1:
-      tap: 1
-      shifted: "!"
-    N2:
-      tap: 2
-      shifted: "@"
-    N3:
-      tap: 3
-      shifted: "#"
-    N4:
-      tap: 4
-      shifted: "$"
-    N5:
-      tap: 5
-      shifted: "%"
-    N6:
-      tap: 6
-      shifted: "^"
-    N7:
-      tap: 7
-      shifted: "&"
-    N8:
-      tap: 8
-      shifted: "*"
-    N9:
-      tap: 9
-      shifted: "("
-    N0:
-      tap: 0
-      shifted: ")"
+    N1: 1
+    N2: 2
+    N3: 3
+    N4: 4
+    N5: 5
+    N6: 6
+    N7: 7
+    N8: 8
+    N9: 9
+    N0: 0
 
     # Modifiers
     LCTRL: ⎈
-    LEFT_CONTROL: ⎈
-    LALT: ⎇
-    LEFT_ALT: ⎇
-    LSHIFT: ⇧
-    LEFT_SHIFT: ⇧
-    LSHFT: ⇧
-    LCMD: $$mdi:apple-keyboard-command$$
-    LG: $$mdi:linux$$
-    LGUI: $$mdi:linux$$
-    LEFT_GUI: $$mdi:linux$$
-    LEFT_COMMAND: $$mdi:apple-keyboard-command$$
     RCTRL: ⎈
-    RIGHT_CONTROL: ⎈
+
+    LALT: ⎇
     RALT: ⎇
-    RIGHT_ALT: ⎇
-    RSHIFT: ⇧
-    RIGHT_SHIFT: ⇧
+
+    LSHFT: ⇧
     RSHFT: ⇧
-    RCMD: $$mdi:apple-keyboard-command$$
-    RG: $$mdi:linux$$
-    PSCRN: $$mdi:printer-outline$$
-    RIGHT_COMMAND: $$mdi:apple-keyboard-command$$
-    LC(C):
-      tap: $$mdi:content-copy$$
-    LC(X):
-      tap: $$mdi:content-cut$$
-    LC(V):
-      tap: $$mdi:content-paste$$
-    LC(S):
-      tap: 🖫
-    # "Meh" key
-    LS(LC(LALT)): $$mdi:star-three-points$$
+
+    CAPS: ⇪
+
+    LGUI: 🐧
+    RGUI: 🐧
+
+    LC(C): ⧉
+    LC(X): ✀
+    LC(V): 📋︎
+    LC(S): 🖫
 
     # Arrows
     UP: ▲
@@ -543,132 +432,40 @@ parse_config:
     RIGHT_ARROW: ▶
     HOME: ⇤
     END: ⇥
+    PG_UP: ⍐
     PAGE_UP: ⍐
+    PG_DN: ⍗
     PAGE_DOWN: ⍗
     INSERT: ⎀
 
     # Whitespace
-    ENTER:
-      type: enter
-      tap: $$mdi:keyboard-return$$
-    RET:
-      type: enter
-      tap: $$mdi:keyboard-return$$
+    ENTER: ↵
+    RET: ↵
     ESC: ⎋
     ESCAPE: ⎋
     TAB: ↹
-    LS(TAB): $$mdi:keyboard-tab-reverse$$
-    SPACE: $$mdi:keyboard-space$$
-    BACKSPACE:
-      type: backspace
-      tap: $$mdi:backspace$$
-    BSPC:
-      type: backspace
-      tap: $$mdi:backspace$$
-    DELETE: $$mdi:backspace-reverse$$
-    DEL: $$mdi:backspace-reverse$$
-
-    # Locks
-    CAPSLOCK: $$mdi:apple-keyboard-caps$$
-    CAPS: $$mdi:apple-keyboard-caps$$
+    LS(TAB): ↹
+    SPACE: ␣
+    BACKSPACE: ⌫
+    BSPC: ⌫
+    DELETE: ⌦
+    DEL: ⌦
 
     # Sound
-    K_VOL_UP: $$mdi:volume-plus$$
-    K_VOL_DN: $$mdi:volume-minus$$
-    C_MUTE: $$mdi:volume-off$$
-    C_VOL_UP: $$mdi:volume-high$$
-    C_VOL_DN: $$mdi:volume-low$$
-    C_VOLUME_UP: $$mdi:volume-high$$
-    C_VOLUME_DOWN: $$mdi:volume-low$$
+    K_VOL_UP: 🕪
+    K_VOL_DN: 🕩
+    C_MUTE: 🕨
+    C_VOL_UP: 🕪
+    C_VOL_DN: 🕩
+    C_VOLUME_UP: 🕪
+    C_VOLUME_DOWN: 🕩
 
     # Media
-    C_NEXT: $$mdi:skip-next$$
-    C_PREV: $$mdi:skip-previous$$
-    C_PP: $$mdi:play-pause$$
-    C_PLAY_PAUSE: $$mdi:play-pause$$
+    C_NEXT: ⏭
+    C_PREV: ⏮
+    C_PP: ⏯
+    C_PLAY_PAUSE: ⏯
 
-    # Bluetooth
-    BT_CLR: $$mdi:bluetooth-off$$
-    BT_SEL: $$mdi:bluetooth-connect$$
-
-    # Settings
-    C_BRI_UP: $$mdi:brightness-5$$
-    C_BRIGHTNESS_INC: $$mdi:brightness-5$$
-    C_BRI_DN: $$mdi:brightness-7$$
-    C_BRI_DEC: $$mdi:brightness-7$$
-    C_BRIGHTNESS_DEC: $$mdi:brightness-7$$
-
-    # System
-    C_POWER: $$mdi:power-standby$$
-    C_AL_LOCK: $$mdi:lock$$
-    K_CANCEL: $$mdi:close-box$$
-    K_FIND: $$mdi:apple-finder$$
-
-    # Command +
-    LG(A):
-      tap: 'A'
-      hold: $$mdi:apple-keyboard-command$$
-    LG(S):
-      tap: 'S'
-      hold: $$mdi:apple-keyboard-command$$
-    LG(D):
-      tap: 'D'
-      hold: $$mdi:apple-keyboard-command$$
-    LG(F):
-      tap: 'F'
-      hold: $$mdi:apple-keyboard-command$$
-    LG(Z):
-      tap: 'Z'
-      hold: $$mdi:apple-keyboard-command$$
-    LG(X):
-      tap: 'X'
-      hold: $$mdi:apple-keyboard-command$$
-    LG(C):
-      tap: 'C'
-      hold: $$mdi:apple-keyboard-command$$
-    LG(V):
-      tap: 'V'
-      hold: $$mdi:apple-keyboard-command$$
-
-    # Zoom
-    RG(RS(A)):
-      tap: $$mdi:microphone$$
-      hold: zoom
-    RG(RS(V)):
-      tap: $$mdi:video$$
-      hold: zoom
-
-  zmk_combos:
-    combo_to_2:
-      align: top
-    combo_to_3:
-      align: top
-    combo_bt_clear:
-      align: top
-      offset: 0.03
-    combo_mute:
-      align: top
-      offset: 0.15
-    combo_minus:
-      key:
-        shifted: "_"
-        hold: "-"
-    combo_equal:
-      key:
-        shifted: "+"
-        hold: "="
-    combo_backslash:
-      key:
-        shifted: "|"
-        hold: \
-    combo_lbkt:
-      key:
-        shifted: "{"
-        hold: "["
-    combo_rbkt:
-      key:
-        shifted: "}"
-        hold: "]"
     combo_semicolon:
       key:
         shifted: ":"

@@ -305,7 +305,7 @@
         };
         combo_midlde_click {
             timeout-ms = <100>;
-            key-positions = <31 32>;
+            key-positions = <31 32 33>;
             layers = <M_BTNS>;
             bindings = <&mkp MB3>;
         };
