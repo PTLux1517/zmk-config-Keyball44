@@ -1,16 +1,15 @@
-ignore_paths: &SHARED_IGNORE_PATHS
-  - 'workflows/keymap_drawer.yml'
-  - 'config/boards/shields/keyball44.json'
-  - 'keymap-drawer/*'
-  - '.gitignore'
-  - 'keymap_drawer.config.yaml'
-  - 'README.md'
-
 on:
   push:
-    paths-ignore: *SHARED_IGNORE_PATHS
+    # be aware of limited YAML anchor syntax support in GH Actions. See https://frenck.dev/github-actions-yaml-anchors-aliases-merge-keys/
+    paths-ignore: &PATHS_IGNORE
+      - 'workflows/keymap_drawer.yml'
+      - 'config/boards/shields/keyball44.json'
+      - 'keymap-drawer/*'
+      - '.gitignore'
+      - 'keymap_drawer.config.yaml'
+      - 'README.md'
   pull_request:
-    paths-ignore: *SHARED_IGNORE_PATHS
+    paths-ignore: *PATHS_IGNORE
   workflow_dispatch:
 
 jobs:
