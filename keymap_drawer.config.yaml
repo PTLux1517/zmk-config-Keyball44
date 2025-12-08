@@ -436,8 +436,10 @@ parse_config:
     PERIOD: '.'
     DOT:
       tap: "."
+      shifted: ""
     COMMA:
       tap: ","
+      shifted: ""
     GREATER_THAN: ">"
     GT: ">"
     LEFT_BRACKET:
@@ -496,38 +498,29 @@ parse_config:
       shifted: ")"
 
     # Modifiers
-    LCTRL: "CTRL"
-    LEFT_CONTROL: $$mdi:apple-keyboard-control$$
-    LALT: "ALT"
-    LEFT_ALT: $$mdi:apple-keyboard-option$$
-    LSHIFT: $$mdi:apple-keyboard-shift$$
-    LEFT_SHIFT: $$mdi:apple-keyboard-shift$$
-    LSHFT: $$mdi:apple-keyboard-shift$$
+    LCTRL: ⎈
+    LEFT_CONTROL: ⎈
+    LALT: ⎇
+    LEFT_ALT: ⎇
+    LSHIFT: ⇧
+    LEFT_SHIFT: ⇧
+    LSHFT: ⇧
     LCMD: $$mdi:apple-keyboard-command$$
     LG: $$mdi:linux$$
     LGUI: $$mdi:linux$$
     LEFT_GUI: $$mdi:linux$$
     LEFT_COMMAND: $$mdi:apple-keyboard-command$$
-    RCTRL: $$mdi:apple-keyboard-control$$
-    RIGHT_CONTROL: $$mdi:apple-keyboard-control$$
-    RALT: $$mdi:apple-keyboard-option$$
-    RIGHT_ALT: $$mdi:apple-keyboard-option$$
-    RSHIFT: $$mdi:apple-keyboard-shift$$
-    RIGHT_SHIFT: $$mdi:apple-keyboard-shift$$
-    RSHFT: $$mdi:apple-keyboard-shift$$
+    RCTRL: ⎈
+    RIGHT_CONTROL: ⎈
+    RALT: ⎇
+    RIGHT_ALT: ⎇
+    RSHIFT: ⇧
+    RIGHT_SHIFT: ⇧
+    RSHFT: ⇧
     RCMD: $$mdi:apple-keyboard-command$$
-    RG: $$mdi:apple-keyboard-command$$
+    RG: $$mdi:linux$$
     PSCRN: $$mdi:printer-outline$$
     RIGHT_COMMAND: $$mdi:apple-keyboard-command$$
-    PAGE_UP:
-      tap: 'PgUp'
-      shifted: ''
-    PAGE_DOWN:
-      tap: 'PgDn'
-      shifted: ''
-    INSERT:
-       tap: 'Ins'
-       shifted: ''
     LC(C):
       tap: $$mdi:content-copy$$
     LC(X):
@@ -535,19 +528,24 @@ parse_config:
     LC(V):
       tap: $$mdi:content-paste$$
     LC(S):
-      tap: $$mdi:content-save$$
+      tap: 🖫
     # "Meh" key
     LS(LC(LALT)): $$mdi:star-three-points$$
 
     # Arrows
-    UP: $$mdi:arrow-up-bold$$
-    UP_ARROW: $$mdi:arrow-up-bold$$
-    DOWN: $$mdi:arrow-down-bold$$
-    DOWN_ARROW: $$mdi:arrow-down-bold$$
-    LEFT_ARROW: $$mdi:arrow-left-bold$$
-    LEFT: $$mdi:arrow-left-bold$$
-    RIGHT: $$mdi:arrow-right-bold$$
-    RIGHT_ARROW: $$mdi:arrow-right-bold$$
+    UP: ▲
+    UP_ARROW: ▲
+    DOWN: ▼
+    DOWN_ARROW: ▼
+    LEFT_ARROW: ◀
+    LEFT: ◀
+    RIGHT: ▶
+    RIGHT_ARROW: ▶
+    HOME: ⇤
+    END: ⇥
+    PAGE_UP: ⍐
+    PAGE_DOWN: ⍗
+    INSERT: ⎀
 
     # Whitespace
     ENTER:
@@ -556,9 +554,9 @@ parse_config:
     RET:
       type: enter
       tap: $$mdi:keyboard-return$$
-    ESC: "ESC"
-    ESCAPE: "ESC"
-    TAB: $$mdi:keyboard-tab$$
+    ESC: ⎋
+    ESCAPE: ⎋
+    TAB: ↹
     LS(TAB): $$mdi:keyboard-tab-reverse$$
     SPACE: $$mdi:keyboard-space$$
     BACKSPACE:
