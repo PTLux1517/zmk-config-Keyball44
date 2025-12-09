@@ -40,6 +40,14 @@ draw_config:
       fill: #0f577e;
     }
     
+    /* styling for combo dendrons */
+    path.combo {
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke: #554a34;
+      fill: none;
+    }
+    
     /* default key side styling, only used is draw_key_sides is set */
     rect.side {
       filter: brightness(80%);
@@ -64,11 +72,22 @@ draw_config:
       font-weight: bold;
     }
     
-    /* styling for combo tap, and key non-tap label text */
-    text.combo, text.hold, text.shifted, text.left, text.right {
+    /* fainter symbol for transparent keys */
+    text.trans {
+      fill: #050505;
+    }
+    
+    /* styling for key non-tap label text */
+    text.hold, text.shifted, text.left, text.right {
       font-size: 18px;
       font-weight: bold;
       fill: #b8ca2f;
+    }
+    
+    text.combo {
+      font-size: 32px;
+      dominant-baseline: middle;
+      font-weight: normal;
     }
     
     text.hold {
@@ -176,68 +195,37 @@ parse_config:
     # Layers
     "&to ALPHAS":
       tap: 𝜶
+      type: layer-activator
     "&mo DIGITS":
       tap: ℤ
+      type: layer-activator
     "&sl FUNCTS":
       tap: 𝒇
+      type: layer-activator
     "&mo SYMBLS":
       tap: ±
+      type: layer-activator
     "&mo M_BTNS":
       tap: 🖰
+      type: layer-activator
     "&mo SCROLL":
       tap: 🡙
+      type: layer-activator
     "&mo LOWDPI":
       tap: 🕀
+      type: layer-activator
 
     # Mouse
-    "&msc SCRL_UP":
-      tap: $$mdi:pan-up$$
-      hold: ''
-      shifted: ''
-    "&msc SCRL_DOWN":
-      tap: $$mdi:pan-down$$
-      hold: ''
-      shifted: ''
-    "&msc SCRL_LEFT":
-      tap: $$mdi:pan-left$$
-      hold: ''
-      shifted: ''
-    "&msc SCRL_RIGHT":
-      tap: $$mdi:pan-right$$
-      hold: ''
-      shifted: ''
-    "&mmv MOVE_LEFT":
-      tap: $$mdi:menu-left$$
-      hold: ''
-      shifted: $$mdi:mouse$$
-    "&mmv MOVE_RIGHT":
-      tap: $$mdi:menu-right$$
-      hold: ''
-      shifted: $$mdi:mouse$$
-    "&mmv MOVE_UP":
-      tap: $$mdi:menu-up$$
-      hold: ''
-      shifted: $$mdi:mouse$$
-    "&mmv MOVE_DOWN":
-      tap: $$mdi:menu-down$$
-      hold: ''
-      shifted: $$mdi:mouse$$
-    "&mkp LCLK":
-      tap: $$mdi:mouse-left-click-outline$$
     "&mkp MB1":
-      tap: $$mdi:mouse-left-click-outline$$
-    "&mkp RCLK":
-      tap: $$mdi:mouse-right-click-outline$$
+      tap: '⭷🖰L'
     "&mkp MB2":
-      tap: $$mdi:mouse-right-click-outline$$
-    "&mkp MCLK":
-      tap: $$mdi:mouse-scroll-wheel$$
+      tap: 'R🖰⭶'
     "&mkp MB3":
-      tap: $$mdi:mouse-scroll-wheel$$
+      tap: 'M🖱⭱'
     "&mkp MB4":
-      tap: $$mdi:arrow-left-box$$
+      tap: '🡨B'
     "&mkp MB5":
-      tap: $$mdi:arrow-right-box$$
+      tap: 'F🡪'
 
     # Modifiers
     "&td_SHFTCAPS":
@@ -388,12 +376,12 @@ parse_config:
     LEFT: ◀
     RIGHT: ▶
     RIGHT_ARROW: ▶
-    HOME: ↤
-    END: ↦
-    PG_UP: ↥
-    PAGE_UP: ↥
-    PG_DN: ↧
-    PAGE_DOWN: ↧
+    HOME: '↤ H'
+    END: 'E ↦'
+    PG_UP: '↥U'
+    PAGE_UP: '↥U'
+    PG_DN: '↧D'
+    PAGE_DOWN: '↧D'
     INSERT: ⎀
 
     # Whitespace
@@ -404,10 +392,10 @@ parse_config:
     TAB: ↹
     LS(TAB): ↹
     SPACE: ␣
-    BACKSPACE: ⌫
-    BSPC: ⌫
-    DELETE: ⌦
-    DEL: ⌦
+    BACKSPACE: 🠴
+    BSPC: 🠴
+    DELETE: 🠶
+    DEL: 🠶
 
     # Sound
     K_VOL_UP: 🕪
@@ -430,14 +418,14 @@ parse_config:
         hold: ";"
 
     combo_tab:
-      align: "mid"
+      align: "top"
 
     combo_emdash:
-      align: "mid"
+      align: "top"
 
     combo_functions_layer:
-      align: "mid"
+      align: "top"
 
     combo_middle_click:
       align: "bottom"
-      offset: 2.0
+      offset: 20.0
