@@ -47,6 +47,9 @@ draw_config:
       stroke: #554a34;
       fill: none;
     }
+    .layer-🖰_M-BTNS .combopos-0 {
+      translate: 0px 30px;
+    }
     
     /* default key side styling, only used is draw_key_sides is set */
     rect.side {
@@ -116,6 +119,7 @@ draw_config:
     text.esc {
       font-size: 36px;
       font-weight: bold;
+      dominant-baseline: middle;
       fill: #050505;
     }
     rect.esc {
@@ -455,7 +459,7 @@ parse_config:
         hold: ";"
 
     combo_tab:
-      align: "top"
+      align: "mid"
 
     combo_emdash:
       align: "top"
@@ -464,4 +468,4 @@ parse_config:
       align: "top"
 
     combo_middle_click:
-      align: "bottom"
+      align: "mid"
