@@ -60,7 +60,7 @@ draw_config:
     
     /* styling for layer labels */
     text.label {
-      font-size: 40px;
+      font-size: 36px;
       font-weight: bold;
       text-anchor: start;
       stroke: black;
@@ -68,8 +68,10 @@ draw_config:
       paint-order: stroke;
     }
     text.layer-activator {
-      font-size: 12px;
+      font-size: 24px;
       font-weight: bold;
+      text-decoration: none;
+      stroke: #777;
     }
     
     /* fainter symbol for transparent keys */
@@ -101,7 +103,7 @@ draw_config:
     }
 
     /* Color accent for held keys */
-    rect.held, rect.combo.held {
+    rect.held, rect.combo.held, rect.layer-activator {
       fill: #622fca;
     }
 
@@ -376,8 +378,8 @@ parse_config:
     LEFT: ◀
     RIGHT: ▶
     RIGHT_ARROW: ▶
-    HOME: '↤ H'
-    END: 'E ↦'
+    HOME: '↤H'
+    END: 'E↦'
     PG_UP: '↥U'
     PAGE_UP: '↥U'
     PG_DN: '↧D'
@@ -428,4 +430,4 @@ parse_config:
 
     combo_middle_click:
       align: "bottom"
-      offset: 20.0
+      offset: 60.0
