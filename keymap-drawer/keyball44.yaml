@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: keyball44}
 layers:
-  𝜶_ALPHAS:
-  - ⌦
+  ALPHAS(𝜶):
+  - {t: 🠶, type: font24}
   - G
   - V
   - D
@@ -12,7 +12,7 @@ layers:
   - U
   - O
   - Y
-  - ⌫
+  - {t: 🠴, type: font24}
   - ⎇
   - C
   - S
@@ -25,7 +25,7 @@ layers:
   - A
   - I
   - {t: ;, s: ':'}
-  - ⎈
+  - {t: ⎈, type: font30}
   - W
   - B
   - M
@@ -40,24 +40,24 @@ layers:
   - (
   - )
   - {t: '`', s: '~'}
-  - ℤ
+  - {t: ℤ, type: layer-activator}
   - {t: ⇧, h: ⇪}
   - ␣
   - ↵
-  - 🖰
-  ℤ_DIGITS:
-  - ⌦
+  - {t: 🖰, type: layer-activator}
+  DIGITS(ℤ):
+  - {t: 🠶, type: font24}
   - ✀
   - {t: '7', s: '['}
   - {t: '8', s: ']'}
   - {t: '9', s: ^}
   - {t: '*', s: '#'}
   - {t: +, s: '&'}
-  - ↤
+  - ↤H
   - ▲
-  - ↦
-  - ↥
-  - ⌫
+  - E↦
+  - ↥U
+  - {t: 🠴, type: font24}
   - 📋︎
   - 🗐
   - {t: '4', s: <}
@@ -68,7 +68,7 @@ layers:
   - ◀
   - ▼
   - ▶
-  - ↧
+  - ↧D
   - {t: ;, s: ':'}
   - '@'
   - {t: '0', s: 0x}
@@ -81,7 +81,7 @@ layers:
   - {t: 🕨, s: ⏯}
   - {t: 🕪, s: ⏭}
   - 🐧
-  - ⎋
+  - {t: ⎋, type: esc}
   - (
   - )
   - {t: '`', s: '~'}
@@ -89,8 +89,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ␣, s: _}
   - {t: ▽, type: trans}
-  - 🖰
-  ±_SYMBLS:
+  - {t: 🖰, type: layer-activator}
+  SYMBLS(±):
   - {type: none}
   - {type: none}
   - {type: none}
@@ -135,7 +135,7 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  𝒇_FUNCTS:
+  FUNCTS(𝒇):
   - {type: none}
   - {type: none}
   - {t: F7, s: F17}
@@ -167,7 +167,7 @@ layers:
   - {t: F3, s: F13}
   - {s: F23}
   - {type: none}
-  - ⎈
+  - {t: ⎈, type: font30}
   - ⎇
   - {type: none}
   - {type: none}
@@ -176,21 +176,21 @@ layers:
   - {type: none}
   - {type: none}
   - {s: F24}
-  - ⇧
-  - ⇧
+  - {t: ⇧, type: font30}
+  - {t: ⇧, type: font30}
   - {type: none}
   - {type: none}
-  🖰_M-BTNS:
-  - ⌦
+  M-BTNS(🖰):
+  - {t: 🠶, type: font24}
   - ✀
   - {type: none}
   - {type: none}
   - {type: none}
-  - ⌫
-  - ↥
-  - ↤
+  - {t: 🠴, type: font24}
+  - ↥U
+  - ↤H
   - ▲
-  - ↦
+  - E↦
   - {type: none}
   - {type: none}
   - 📋︎
@@ -199,7 +199,7 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - ↧
+  - ↧D
   - ◀
   - ▼
   - ▶
@@ -211,23 +211,21 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - ⎋
-  - $$mdi:mouse-left-click-outline$$
-  - 🡙
-  - $$mdi:mouse-right-click-outline$$
-  - 🕀
+  - {t: ⎋, type: esc}
+  - ⭷🖰L
+  - {t: 🡙, type: layer-activator}
+  - R🖰⭶
+  - {t: 🕀, type: layer-activator}
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
   - {t: ▽, type: trans}
-  - $$mdi:arrow-left-box$$
-  - $$mdi:arrow-right-box$$
+  - 🡨B
+  - F🡪
   - {t: ▽, type: trans}
-  🡙_SCROLL:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  SCROLL(🡙):
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -270,7 +268,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  🕀_LOWDPI:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  LOWDPI(🕀):
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -318,13 +318,13 @@ layers:
 combos:
 - p: [41, 42]
   k: ↹
-  l: [𝜶_ALPHAS]
+  l: [ALPHAS(𝜶)]
 - p: [41, 42]
   k: —
-  l: [ℤ_DIGITS]
+  l: [DIGITS(ℤ)]
 - p: [36, 37]
-  k: 𝒇
-  l: [𝜶_ALPHAS]
+  k: {t: 𝒇, type: layer-activator}
+  l: [ALPHAS(𝜶)]
 - p: [31, 32, 33]
-  k: $$mdi:mouse-scroll-wheel$$
-  l: [🖰_M-BTNS]
+  k: M🖱⭱
+  l: [M-BTNS(🖰)]
