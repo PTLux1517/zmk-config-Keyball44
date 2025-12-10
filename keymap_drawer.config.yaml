@@ -114,7 +114,8 @@ draw_config:
       font-size: 30px;
     }
     text.esc {
-      fill: #050505
+      font-size: 30px;
+      fill: #050505;
     }
     rect.esc {
       fill: #ca5b2f;
@@ -412,10 +413,10 @@ parse_config:
     RET: ↵
     ESC:
       tap: ⎋
-      type: [esc, font30]
+      type: esc
     ESCAPE:
       tap: ⎋
-      type: [esc, font30]
+      type: esc
     TAB: ↹
     LS(TAB): ↹
     SPACE: ␣
