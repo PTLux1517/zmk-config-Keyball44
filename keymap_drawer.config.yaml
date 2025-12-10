@@ -106,6 +106,10 @@ draw_config:
     rect.held, rect.combo.held, rect.layer-activator {
       fill: #622fca;
     }
+    
+    rect.esc {
+      fill: #ca5b2f;
+    }
 
     /* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
     .sym_sub_text.tap {
@@ -199,22 +203,22 @@ parse_config:
       tap: 𝜶
       type: layer-activator
     "&mo DIGITS":
-      tap: ℤ
+      hold: ℤ
       type: layer-activator
     "&sl FUNCTS":
       tap: 𝒇
       type: layer-activator
     "&mo SYMBLS":
-      tap: ±
+      hold: ±
       type: layer-activator
     "&mo M_BTNS":
-      tap: 🖰
+      hold: 🖰
       type: layer-activator
     "&mo SCROLL":
-      tap: 🡙
+      hold: 🡙
       type: layer-activator
     "&mo LOWDPI":
-      tap: 🕀
+      hold: 🕀
       type: layer-activator
 
     # Mouse
@@ -389,8 +393,12 @@ parse_config:
     # Whitespace
     ENTER: ↵
     RET: ↵
-    ESC: ⎋
-    ESCAPE: ⎋
+    ESC:
+      tap: ⎋
+      type: esc
+    ESCAPE:
+      tap: ⎋
+      type: esc
     TAB: ↹
     LS(TAB): ↹
     SPACE: ␣
