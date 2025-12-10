@@ -107,6 +107,15 @@ draw_config:
       fill: #622fca;
     }
     
+    text.font24 {
+      font-size: 24px;
+    }
+    text.font30 {
+      font-size: 30px;
+    }
+    text.esc {
+      fill: #050505
+    }
     rect.esc {
       fill: #ca5b2f;
     }
@@ -203,22 +212,22 @@ parse_config:
       tap: 𝜶
       type: layer-activator
     "&mo DIGITS":
-      hold: ℤ
+      tap: ℤ
       type: layer-activator
     "&sl FUNCTS":
       tap: 𝒇
       type: layer-activator
     "&mo SYMBLS":
-      hold: ±
+      tap: ±
       type: layer-activator
     "&mo M_BTNS":
-      hold: 🖰
+      tap: 🖰
       type: layer-activator
     "&mo SCROLL":
-      hold: 🡙
+      tap: 🡙
       type: layer-activator
     "&mo LOWDPI":
-      hold: 🕀
+      tap: 🕀
       type: layer-activator
 
     # Mouse
@@ -354,14 +363,22 @@ parse_config:
     N0: "0"
 
     # Modifiers
-    LCTRL: ⎈
-    RCTRL: ⎈
+    LCTRL:
+      tap: ⎈
+      type: font30
+    RCTRL:
+      tap: ⎈
+      type: font30
 
     LALT: ⎇
     RALT: ⎇
 
-    LSHFT: ⇧
-    RSHFT: ⇧
+    LSHFT:
+      tap: ⇧
+      type: font30
+    RSHFT:
+      tap: ⇧
+      type: font30
 
     CAPS: ⇪
 
@@ -395,17 +412,25 @@ parse_config:
     RET: ↵
     ESC:
       tap: ⎋
-      type: esc
+      type: [esc, font30]
     ESCAPE:
       tap: ⎋
-      type: esc
+      type: [esc, font30]
     TAB: ↹
     LS(TAB): ↹
     SPACE: ␣
-    BACKSPACE: 🠴
-    BSPC: 🠴
-    DELETE: 🠶
-    DEL: 🠶
+    BACKSPACE:
+      tap: 🠴
+      type: font24
+    BSPC:
+      tap: 🠴
+      type: font24
+    DELETE:
+      tap: 🠶
+      type: font24
+    DEL:
+      tap: 🠶
+      type: font24
 
     # Sound
     K_VOL_UP: 🕪
@@ -438,4 +463,3 @@ parse_config:
 
     combo_middle_click:
       align: "bottom"
-      offset: 60.0
