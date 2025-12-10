@@ -48,7 +48,7 @@ draw_config:
       fill: none;
     }
     .layer-🖰_M-BTNS .combopos-0 {
-      translate: 0px 30px;
+      translate: 0px 32px;
     }
     
     /* default key side styling, only used is draw_key_sides is set */
