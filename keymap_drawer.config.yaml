@@ -48,7 +48,7 @@ draw_config:
       fill: none;
     }
     .layer-M-BTNS-🖰 .combopos-0 {
-      translate: 0px 20px;
+      translate: 0px 50px;
     }
     
     /* default key side styling, only used is draw_key_sides is set */
@@ -442,7 +442,7 @@ parse_config:
       type: tab
     SPACE:
       tap: ␣
-      type: font24
+      type: font30
     BACKSPACE:
       tap: 🠴
       type: font24
