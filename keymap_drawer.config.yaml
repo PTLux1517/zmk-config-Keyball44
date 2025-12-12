@@ -48,7 +48,7 @@ draw_config:
       fill: none;
     }
     .layer-M-BTNS-🖰 .combopos-0 {
-      translate: 0px 50px;
+      translate: 0px 45px;
     }
     
     /* default key side styling, only used is draw_key_sides is set */
@@ -118,6 +118,17 @@ draw_config:
     }
     text.font30 {
       font-size: 30px;
+    }
+    text.space {
+      
+    }
+    text.space.tap {
+      font-size: 32px;
+      translate: 0px -8px;
+    }
+    text.space.shifted {
+      font-size: 24px;
+      translate: 0px 3px;
     }
     text.tab {
       translate: 0px 2px;
@@ -258,7 +269,7 @@ parse_config:
     # Modifiers
     "&td_SHFTCAPS":
       tap: ⇧
-      hold: ⇪W-⇪L
+      shifted: ⇪1-⇪🔒︎
       type: font24
     "&macro_hex_pfx":
       tap: '0x'
@@ -270,6 +281,10 @@ parse_config:
     "&morph_JUSTCOMMA":
       tap: ','
       shifted: ''
+    "&morph_SPACEUNDER":
+      tap: ␣
+      shifted: _
+      type: space
 
     # Empty
     "&none":
@@ -442,7 +457,7 @@ parse_config:
       type: tab
     SPACE:
       tap: ␣
-      type: font30
+      type: space
     BACKSPACE:
       tap: 🠴
       type: font24
