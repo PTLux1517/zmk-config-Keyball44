@@ -113,6 +113,9 @@ draw_config:
       fill: #622fca;
     }
     
+    text.font18 {
+      font-size: 18px;
+    }
     text.font24 {
       font-size: 24px;
     }
@@ -263,6 +266,7 @@ parse_config:
       tap: 'R🖰⭶'
     "&mkp MB3":
       tap: 'M🖱⭱'
+      type: font18
     "&mkp MB4":
       tap: '🡨B'
     "&mkp MB5":
@@ -271,7 +275,7 @@ parse_config:
     # Modifiers
     "&td_SHFTCAPS":
       tap: ⇧
-      shifted: ⇪1-⇪🔏
+      shifted: ⇪1-⇪L
       type: font24
     "&macro_hex_pfx":
       tap: '0x'
