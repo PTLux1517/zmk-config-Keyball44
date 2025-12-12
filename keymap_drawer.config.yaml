@@ -76,6 +76,9 @@ draw_config:
       text-decoration: none;
       stroke: #777;
     }
+    text.layer-activator:not(.combo) {
+      translate: 0px -7px;
+    }
     
     /* fainter symbol for transparent keys */
     text.trans {
@@ -116,12 +119,15 @@ draw_config:
     text.font30 {
       font-size: 30px;
     }
+    text.tab {
+      translate: 0px 2px;
+    }
     text.esc {
       font-size: 32px;
       font-weight: bold;
       dominant-baseline: middle;
       fill: #050505;
-      translate: 0px 5px;
+      translate: 0px 4px;
     }
     rect.esc {
       fill: #ca5b2f;
@@ -416,17 +422,27 @@ parse_config:
     INSERT: ⎀
 
     # Whitespace
-    ENTER: ↵
-    RET: ↵
+    ENTER:
+      tap: ↵
+      type: font24
+    RET:
+      tap: ↵
+      type: font24
     ESC:
       tap: ⎋
       type: esc
     ESCAPE:
       tap: ⎋
       type: esc
-    TAB: ↹
-    LS(TAB): ↹
-    SPACE: ␣
+    TAB:
+      tap: ↹
+      type: tab
+    LS(TAB):
+      tap: ↹
+      type: tab
+    SPACE:
+      tap: ␣
+      type: font24
     BACKSPACE:
       tap: 🠴
       type: font24
