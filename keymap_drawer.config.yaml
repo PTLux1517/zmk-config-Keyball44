@@ -77,7 +77,7 @@ draw_config:
       stroke: #777;
     }
     text.layer-activator:not(.combo) {
-      translate: 0px -7px;
+      translate: 0px -9px;
     }
     
     /* fainter symbol for transparent keys */
@@ -119,16 +119,13 @@ draw_config:
     text.font30 {
       font-size: 30px;
     }
-    text.space {
-      
-    }
     text.space.tap {
       font-size: 32px;
-      translate: 0px -8px;
+      translate: 0px -10px;
     }
     text.space.shifted {
       font-size: 24px;
-      translate: 0px 3px;
+      translate: 0px 4px;
     }
     text.tab {
       translate: 0px 2px;
@@ -138,10 +135,15 @@ draw_config:
       font-weight: bold;
       dominant-baseline: middle;
       fill: #050505;
+      stroke: #050505;
       translate: 0px 4px;
     }
     rect.esc {
       fill: #ca5b2f;
+    }
+    text.ctrl {
+      font-size: 30px;
+      translate: 0px -5px;
     }
 
     /* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
@@ -269,7 +271,7 @@ parse_config:
     # Modifiers
     "&td_SHFTCAPS":
       tap: ⇧
-      shifted: ⇪1-⇪🔒︎
+      shifted: ⇪1-⇪🔏
       type: font24
     "&macro_hex_pfx":
       tap: '0x'
@@ -394,10 +396,10 @@ parse_config:
     # Modifiers
     LCTRL:
       tap: ⎈
-      type: font30
+      type: ctrl
     RCTRL:
       tap: ⎈
-      type: font30
+      type: ctrl
 
     LALT: ⎇
     RALT: ⎇
