@@ -305,7 +305,7 @@
         };
         combo_middle_click {
             timeout-ms = <100>;
-            key-positions = <31 32 33>;
+            key-positions = <31 32>;
             layers = <M_BTNS>;
             bindings = <&mkp MB3>;
         };
@@ -329,7 +329,7 @@
         compatible = "zmk,keymap";
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: ALPHAS ------------------------------------------------------------------------------------------------------------------------------------------
         default_layer {
-            label = "ALPHAS(𝜶)";
+            label = "ALPHAS-𝜶";
             bindings = <
 &kp DEL               &kp G                 &kp V                 &kp D                 &kp F                 &kp J                                                             &kp Q                 &kp R                 &kp U                 &kp O                 &kp Y                 &kp BACKSPACE
 &kp LALT              &kp C                 &kp S                 &kp T                 &kp H                 &kp APOS                                                          &kp L                 &kp N                 &kp E                 &kp A                 &kp I                 &kp SEMI
@@ -339,7 +339,7 @@
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: DIGITS ------------------------------------------------------------------------------------------------------------------------------------------
         number_layer {
-            label = "DIGITS(ℤ)";
+            label = "DIGITS-ℤ";
             bindings = <
 &kp DEL               &kp LC(X)             &morph_LBKT7          &morph_RBKT8          &morph_CARET9         &morph_MULTIPLYHASH                                               &morph_PLUSAMPS       &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
 &kp LC(V)             &kp LC(C)             &morph_LT4            &morph_GT5            &morph_EQUAL6         &morph_DIVIDEBSLH                                                 &morph_MINUSPIPE      &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &kp SEMI
@@ -349,7 +349,7 @@
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: SYMBLS ------------------------------------------------------------------------------------------------------------------------------------------
         symbol_layer {
-            label = "SYMBLS(±)";
+            label = "SYMBLS-±";
             bindings = <
 &none                 &none                 &none                 &none                 &none                 &none                                                             &none                 &none                 &none                 &none                 &none                 &none
 &none                 &none                 &none                 &none                 &none                 &none                                                             &none                 &none                 &none                 &none                 &none                 &none
@@ -359,7 +359,7 @@
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: FUNCTS ------------------------------------------------------------------------------------------------------------------------------------------
         function_layer {
-            label = "FUNCTS(𝒇)";
+            label = "FUNCTS-𝒇";
             bindings = <
 &none                 &none                 &morph_F07_F17        &morph_F08_F18        &morph_F09_F19        &morph_F21                                                        &none                 &none                 &none                 &none                 &none                 &none
 &none                 &none                 &morph_F04_F14        &morph_F05_F15        &morph_F06_F16        &morph_F22                                                        &none                 &none                 &none                 &none                 &none                 &none
@@ -369,7 +369,7 @@
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: M_BTNS ------------------------------------------------------------------------------------------------------------------------------------------
         mouse_button_layer {
-            label = "M-BTNS(🖰)";
+            label = "M-BTNS-🖰";
             bindings = <
 &kp DEL               &kp LC(X)             &none                 &none                 &none                 &kp BACKSPACE                                                     &kp PG_UP             &kp HOME              &kp UP                &kp END               &none                 &none
 &kp LC(V)             &kp LC(C)             &kp LC(S)             &none                 &none                 &none                                                             &kp PG_DN             &kp LEFT              &kp DOWN              &kp RIGHT             &none                 &none
@@ -379,7 +379,7 @@
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: SCROLL ------------------------------------------------------------------------------------------------------------------------------------------
         scroll_layer {
-            label = "SCROLL(🡙)";
+            label = "SCROLL-🡙";
             bindings = <
 &trans                &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans                &trans
 &trans                &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans                &trans
@@ -389,7 +389,7 @@
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: LOWDPI ------------------------------------------------------------------------------------------------------------------------------------------
         snipe_layer {
-            label = "LOWDPI(🕀)";
+            label = "LOWDPI-🕀";
             bindings = <
 &trans                &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans                &trans
 &trans                &trans                &trans                &trans                &trans                &trans                                                            &trans                &trans                &trans                &trans                &trans                &trans
