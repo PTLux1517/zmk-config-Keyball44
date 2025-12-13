@@ -53,6 +53,11 @@ draw_config:
       stroke: #554a34;
       fill: none;
     }
+    .layer-M-BTNS-🖰,
+    .layer-SCROLL-🡙,
+    .layer-LOWDPI-🕀 {
+      translate: 0px 150px;
+    }
     .layer-M-BTNS-🖰 .combopos-0 {
       translate: 0px 45px;
     }
@@ -113,7 +118,8 @@ draw_config:
     text.hold, text.shifted, text.left, text.right {
       font-size: 18px;
       font-weight: bold;
-      fill: #b8ca2f;
+      /*fill: #b8ca2f;*/
+      fill: #4b4b40;
     }
     
     text.combo {
@@ -156,6 +162,7 @@ draw_config:
     }
     text.shiftcaps.shifted {
       font-weight: 100;
+      font-family: Aldrich;
     }
     text.tab {
       translate: 0px 2px;
@@ -169,7 +176,8 @@ draw_config:
       translate: 0px 4px;
     }
     rect.esc {
-      fill: #ca5b2f;
+      /*fill: #ca5b2f; red-orange*/
+      fill: #635b21;
     }
     text.ctrl {
       font-size: 30px;
@@ -309,7 +317,7 @@ parse_config:
     "&mkp MB5":
       tap: 'F🡪'
 
-    # Modifiers
+    # Custom Multikeys
     "&td_SHFTCAPS":
       tap: ⇧
       shifted: ⇪1-⇪🔒︎
@@ -328,6 +336,62 @@ parse_config:
       tap: ␣
       shifted: _
       type: space
+    "&morph_F01_F11":
+      tap: '𝒇(1)'
+      shifted: '𝒇(11)'
+      type: func
+    "&morph_F02_F12":
+      tap: '𝒇(2)'
+      shifted: '𝒇(12)'
+      type: func
+    "&morph_F03_F13":
+      tap: '𝒇(3)'
+      shifted: '𝒇(13)'
+      type: func
+    "&morph_F04_F14":
+      tap: '𝒇(4)'
+      shifted: '𝒇(14)'
+      type: func
+    "&morph_F05_F15":
+      tap: '𝒇(5)'
+      shifted: '𝒇(15)'
+      type: func
+    "&morph_F06_F16":
+      tap: '𝒇(6)'
+      shifted: '𝒇(16)'
+      type: func
+    "&morph_F07_F17":
+      tap: '𝒇(7)'
+      shifted: '𝒇(17)'
+      type: func
+    "&morph_F08_F18":
+      tap: '𝒇(8)'
+      shifted: '𝒇(18)'
+      type: func
+    "&morph_F09_F19":
+      tap: '𝒇(9)'
+      shifted: '𝒇(19)'
+      type: func
+    "&morph_F10_F20":
+      tap: '𝒇(10)'
+      shifted: '𝒇(20)'
+      type: func
+    "&morph_F21":
+      tap: ''
+      shifted: '𝒇(21)'
+      type: func
+    "&morph_F22":
+      tap: ''
+      shifted: '𝒇(22)'
+      type: func
+    "&morph_F23":
+      tap: ''
+      shifted: '𝒇(23)'
+      type: func
+    "&morph_F24":
+      tap: ''
+      shifted: '𝒇(24)'
+      type: func
 
     # Empty
     "&none":

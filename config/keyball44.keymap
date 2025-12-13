@@ -71,22 +71,22 @@
             bindings = <&kp N0>, <&macro_hex_pfx>;
             mods = <(MOD_LSFT)>;
         };
-        morph_LBRC1: morph_leftbrace_one {
+        morph_LBKT1: morph_leftbracket_one {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N1>, <&kp LBRC>;
+            bindings = <&kp N1>, <&kp LBKT>;
             mods = <(MOD_LSFT)>;
         };
-        morph_RBRC2: morph_rightbrace_two {
+        morph_EXCL2: morph_exclamation_two {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp RBRC>;
+            bindings = <&kp N2>, <&kp EXCL>;
             mods = <(MOD_LSFT)>;
         };
-        morph_EXCL3: morph_exclamation_three {
+        morph_RBKT3: morph_rightbracket_three {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N3>, <&kp EXCL>;
+            bindings = <&kp N3>, <&kp RBKT>;
             mods = <(MOD_LSFT)>;
         };
         morph_LT4: morph_lessthan_four {
@@ -95,42 +95,42 @@
             bindings = <&kp N4>, <&kp LT>;
             mods = <(MOD_LSFT)>;
         };
-        morph_GT5: morph_greaterthan_five {
+        morph_EQUAL5: morph_equal_five {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N5>, <&kp GT>;
+            bindings = <&kp N5>, <&kp EQUAL>;
             mods = <(MOD_LSFT)>;
         };
-        morph_EQUAL6: morph_equal_six {
+        morph_GT6: morph_greaterthan_six {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N6>, <&kp EQUAL>;
+            bindings = <&kp N6>, <&kp GT>;
             mods = <(MOD_LSFT)>;
         };
-        morph_LBKT7: morph_leftbracket_seven {
+        morph_LBRC7: morph_leftbrace_seven {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N7>, <&kp LBKT>;
+            bindings = <&kp N7>, <&kp LBRC>;
             mods = <(MOD_LSFT)>;
         };
-        morph_RBKT8: morph_rightbracket_eight {
+        morph_CARET8: morph_caret_eight {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N8>, <&kp RBKT>;
+            bindings = <&kp N8>, <&kp caret>;
             mods = <(MOD_LSFT)>;
         };
-        morph_CARET9: morph_CARET_nine {
+        morph_RBRC9: morph_rightbrace_nine {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N9>, <&kp CARET>;
+            bindings = <&kp N9>, <&kp RBRC>;
             mods = <(MOD_LSFT)>;
         };
 
         // ---------- NUMPAD OPERATORS -----------
-        morph_MULTIPLYHASH: morph_multiply_hash {
+        morph_MULTIPLYAMPS: morph_multiply_logical_and {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp KP_MULTIPLY>, <&kp HASH>;
+            bindings = <&kp KP_MULTIPLY>, <&kp AMPS>;
             mods = <(MOD_LSFT)>;
         };
         morph_DIVIDEBSLH: morph_forwardslash_backslash {
@@ -139,16 +139,16 @@
             bindings = <&kp KP_DIVIDE>, <&kp BSLH>;
             mods = <(MOD_LSFT)>;
         };
-        morph_PLUSAMPS: morph_plus_ampersand {
+        morph_PLUSPIPE: morph_plus_logical_or {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp KP_PLUS>, <&kp AMPS>;
+            bindings = <&kp KP_PLUS>, <&kp PIPE>;
             mods = <(MOD_LSFT)>;
         };
-        morph_MINUSPIPE: morph_minus_pipe {
+        morph_MINUSHASH: morph_minus_hash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp KP_MINUS>, <&kp PIPE>;
+            bindings = <&kp KP_MINUS>, <&kp HASH>;
             mods = <(MOD_LSFT)>;
         };
         morph_DOTDOLLAR: morph_dot_dollar {
@@ -346,9 +346,9 @@
         number_layer {
             label = "DIGITS-ℤ";
             bindings = <
-&kp DEL               &kp LC(X)             &morph_LBKT7          &morph_RBKT8          &morph_CARET9         &morph_MULTIPLYHASH                                               &morph_PLUSAMPS       &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
-&kp LC(V)             &kp LC(C)             &morph_LT4            &morph_GT5            &morph_EQUAL6         &morph_DIVIDEBSLH                                                 &morph_MINUSPIPE      &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &kp SEMI
-&kp AT                &morph_HEX0           &morph_LBRC1          &morph_RBRC2          &morph_EXCL3          &morph_DOTDOLLAR                                                  &morph_COMMAPERCENT   &morph_VOLDNPREV      &morph_MUTEPLAYPAUSE  &morph_VOLUPNEXT      &kp LGUI              &kp ESC
+&kp DEL               &kp LC(X)             &morph_LBRC7          &morph_CARET8         &morph_RBRC9          &morph_MULTIPLYAMPS                                               &morph_PLUSPIPE       &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
+&kp LC(V)             &kp LC(C)             &morph_LT4            &morph_EQUAL5         &morph_GT6            &morph_DIVIDEBSLH                                                 &morph_MINUSHASH      &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &kp SEMI
+&kp AT                &morph_HEX0           &morph_LBKT1          &morph_EXCL2          &morph_RBKT3          &morph_DOTDOLLAR                                                  &morph_COMMAPERCENT   &morph_VOLDNPREV      &morph_MUTEPLAYPAUSE  &morph_VOLUPNEXT      &kp LGUI              &kp ESC
                                             &kp LPAR              &kp RPAR              &kp GRAVE             &trans                &kp LSHFT             &morph_SPACEUNDER     &kp ENTER                                                                               &mo M_BTNS
             >;
         };
@@ -356,10 +356,10 @@
         function_layer {
             label = "FUNCTS-𝒇";
             bindings = <
-&none                 &none                 &morph_F07_F17        &morph_F08_F18        &morph_F09_F19        &morph_F21                                                        &none                 &none                 &none                 &none                 &none                 &none
-&none                 &none                 &morph_F04_F14        &morph_F05_F15        &morph_F06_F16        &morph_F22                                                        &none                 &none                 &none                 &none                 &none                 &none
-&none                 &morph_F10_F20        &morph_F01_F11        &morph_F02_F12        &morph_F03_F13        &morph_F23                                                        &none                 &kp LCTRL             &kp LALT              &none                 &none                 &none
-                                            &none                 &none                 &none                 &morph_F24            &kp RSHFT             &kp LSHFT             &none                                                                                   &none
+&none                 &none                 &morph_F07_F17        &morph_F08_F18        &morph_F09_F19        &none                                                             &none                 &none                 &none                 &none                 &none                 &none
+&none                 &none                 &morph_F04_F14        &morph_F05_F15        &morph_F06_F16        &none                                                             &none                 &none                 &none                 &none                 &none                 &none
+&none                 &morph_F10_F20        &morph_F01_F11        &morph_F02_F12        &morph_F03_F13        &none                                                             &none                 &kp LCTRL             &kp LALT              &none                 &none                 &none
+                                            &morph_F21            &morph_F22            &morph_F23            &morph_F24            &kp RSHFT             &kp LSHFT             &none                                                                                   &none
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: M_BTNS ------------------------------------------------------------------------------------------------------------------------------------------
