@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: keyball44}
 layers:
-  ALPHAS(𝜶):
+  ALPHAS-𝜶:
   - {t: 🠶, type: font24}
   - G
   - V
@@ -25,7 +25,7 @@ layers:
   - A
   - I
   - {t: ;, s: ':'}
-  - {t: ⎈, type: font30}
+  - {t: ⎈, type: ctrl}
   - W
   - B
   - M
@@ -41,30 +41,30 @@ layers:
   - )
   - {t: '`', s: '~'}
   - {t: ℤ, type: layer-activator}
-  - {t: ⇧, h: ⇪}
-  - ␣
-  - ↵
+  - {t: ⇧, s: ⇪1-⇪🔒︎, type: shiftcaps}
+  - {t: ␣, type: space}
+  - {t: ↵, type: font24}
   - {t: 🖰, type: layer-activator}
-  DIGITS(ℤ):
+  DIGITS-ℤ:
   - {t: 🠶, type: font24}
-  - ✀
-  - {t: '7', s: '['}
-  - {t: '8', s: ']'}
-  - {t: '9', s: ^}
-  - {t: '*', s: '#'}
-  - {t: +, s: '&'}
+  - {t: ✀, type: cut}
+  - {t: '7', s: '{'}
+  - {t: '8', s: ^}
+  - {t: '9', s: '}'}
+  - {t: '*', s: '&'}
+  - {t: +, s: '|'}
   - ↤H
   - ▲
   - E↦
   - ↥U
   - {t: 🠴, type: font24}
-  - 📋︎
-  - 🗐
+  - {t: 📋︎, type: paste}
+  - {t: 🗐, type: copy}
   - {t: '4', s: <}
-  - {t: '5', s: '>'}
-  - {t: '6', s: '='}
+  - {t: '5', s: '='}
+  - {t: '6', s: '>'}
   - {t: /, s: \}
-  - {t: '-', s: '|'}
+  - {t: '-', s: '#'}
   - ◀
   - ▼
   - ▶
@@ -72,9 +72,9 @@ layers:
   - {t: ;, s: ':'}
   - '@'
   - {t: '0', s: 0x}
-  - {t: '1', s: '{'}
-  - {t: '2', s: '}'}
-  - {t: '3', s: '!'}
+  - {t: '1', s: '['}
+  - {t: '2', s: '!'}
+  - {t: '3', s: ']'}
   - {t: ., s: $}
   - {t: ',', s: '%'}
   - {t: 🕩, s: ⏮}
@@ -85,12 +85,17 @@ layers:
   - (
   - )
   - {t: '`', s: '~'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ␣, s: _}
-  - {t: ▽, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⇧, type: font24}
+  - {t: ␣, s: _, type: space}
+  - {t: ↵, type: font24}
   - {t: 🖰, type: layer-activator}
-  SYMBLS(±):
+  FUNCTS-𝒇:
+  - {type: none}
+  - {type: none}
+  - {t: 𝒇(7), s: 𝒇(17), type: func}
+  - {t: 𝒇(8), s: 𝒇(18), type: func}
+  - {t: 𝒇(9), s: 𝒇(19), type: func}
   - {type: none}
   - {type: none}
   - {type: none}
@@ -100,6 +105,9 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
+  - {t: 𝒇(4), s: 𝒇(14), type: func}
+  - {t: 𝒇(5), s: 𝒇(15), type: func}
+  - {t: 𝒇(6), s: 𝒇(16), type: func}
   - {type: none}
   - {type: none}
   - {type: none}
@@ -108,81 +116,28 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
+  - {t: 𝒇(10), s: 𝒇(20), type: func}
+  - {t: 𝒇(1), s: 𝒇(11), type: func}
+  - {t: 𝒇(2), s: 𝒇(12), type: func}
+  - {t: 𝒇(3), s: 𝒇(13), type: func}
   - {type: none}
   - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  FUNCTS(𝒇):
-  - {type: none}
-  - {type: none}
-  - {t: F7, s: F17}
-  - {t: F8, s: F18}
-  - {t: F9, s: F19}
-  - {s: F21}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {t: F4, s: F14}
-  - {t: F5, s: F15}
-  - {t: F6, s: F16}
-  - {s: F22}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {t: F10, s: F20}
-  - {t: F1, s: F11}
-  - {t: F2, s: F12}
-  - {t: F3, s: F13}
-  - {s: F23}
-  - {type: none}
-  - {t: ⎈, type: font30}
+  - {t: ⎈, type: ctrl}
   - ⎇
   - {type: none}
   - {type: none}
   - {type: none}
+  - {s: 𝒇(21), type: func}
+  - {s: 𝒇(22), type: func}
+  - {s: 𝒇(23), type: func}
+  - {s: 𝒇(24), type: func}
+  - {t: R⇧, type: font24}
+  - {t: ⇧, type: font24}
   - {type: none}
   - {type: none}
-  - {type: none}
-  - {s: F24}
-  - {t: ⇧, type: font30}
-  - {t: ⇧, type: font30}
-  - {type: none}
-  - {type: none}
-  M-BTNS(🖰):
+  M-BTNS-🖰:
   - {t: 🠶, type: font24}
-  - ✀
+  - {t: ✀, type: cut}
   - {type: none}
   - {type: none}
   - {type: none}
@@ -193,9 +148,9 @@ layers:
   - E↦
   - {type: none}
   - {type: none}
-  - 📋︎
-  - 🗐
-  - 🖫
+  - {t: 📋︎, type: paste}
+  - {t: 🗐, type: copy}
+  - {t: 🖫︎, type: save}
   - {type: none}
   - {type: none}
   - {type: none}
@@ -213,118 +168,121 @@ layers:
   - {type: none}
   - {t: ⎋, type: esc}
   - ⭷🖰L
-  - {t: 🡙, type: layer-activator}
   - R🖰⭶
+  - {t: 🡙, type: layer-activator}
   - {t: 🕀, type: layer-activator}
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
-  - {t: ▽, type: trans}
+  - {t: ⇧, type: font24}
   - 🡨B
   - F🡪
-  - {t: ▽, type: trans}
-  SCROLL(🡙):
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  LOWDPI(🕀):
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: ⬤, type: trans}
+  SCROLL-🡙:
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  LOWDPI-🕀:
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
+  - {t: ⬤, type: trans}
 combos:
 - p: [41, 42]
-  k: ↹
-  l: [ALPHAS(𝜶)]
+  k: {t: ↹, type: tab}
+  l: [ALPHAS-𝜶]
 - p: [41, 42]
   k: —
-  l: [DIGITS(ℤ)]
+  l: [DIGITS-ℤ]
 - p: [36, 37]
   k: {t: 𝒇, type: layer-activator}
-  l: [ALPHAS(𝜶)]
-- p: [31, 32, 33]
+  l: [ALPHAS-𝜶]
+- p: [36, 37]
+  k: {t: ⬤, type: trans}
+  l: [FUNCTS-𝒇]
+- p: [31, 32]
   k: M🖱⭱
-  l: [M-BTNS(🖰)]
+  l: [M-BTNS-🖰]
