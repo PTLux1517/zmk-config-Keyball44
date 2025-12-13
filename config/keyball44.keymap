@@ -1,10 +1,9 @@
 #define ALPHAS 0
 #define DIGITS 1
-#define SYMBLS 2
-#define FUNCTS 3
-#define M_BTNS 4
-#define SCROLL 5
-#define LOWDPI 6
+#define FUNCTS 2
+#define M_BTNS 3
+#define SCROLL 4
+#define LOWDPI 5
 
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors/unicode.dtsi>
