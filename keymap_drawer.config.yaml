@@ -151,6 +151,12 @@ draw_config:
       font-size: 24px;
       translate: 0px 5px;
     }
+    text.shiftcaps {
+      font-size: 24px;
+    }
+    text.shiftcaps.shifted {
+      font-weight: 100;
+    }
     text.tab {
       translate: 0px 2px;
     }
@@ -306,8 +312,8 @@ parse_config:
     # Modifiers
     "&td_SHFTCAPS":
       tap: ⇧
-      shifted: ⇪W-⇪L
-      type: font24
+      shifted: ⇪1-⇪🔒︎
+      type: shiftcaps
     "&macro_hex_pfx":
       tap: '0x'
     "&uc 0x2014 0":
