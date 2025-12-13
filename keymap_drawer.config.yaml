@@ -94,7 +94,11 @@ draw_config:
     text.trans {
       fill: #622fca;
       font-size: 20px;
-      translate: -1px -9.5px;
+      translate: -0.5px -9.5px;
+    }
+    .layer-SCROLL-🡙 .key:not(.keypos-33) .tap,
+    .layer-LOWDPI-🕀 .key:not(.keypos-34) .tap {
+      fill: #050505;
     }
     
     /* styling for key non-tap label text */
@@ -283,7 +287,7 @@ parse_config:
     # Modifiers
     "&td_SHFTCAPS":
       tap: ⇧
-      shifted: ⇪1-⇪L
+      shifted: ⇪W-⇪L
       type: font24
     "&macro_hex_pfx":
       tap: '0x'

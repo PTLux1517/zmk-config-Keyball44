@@ -302,6 +302,12 @@
             layers = <ALPHAS>;
             bindings = <&sl FUNCTS>;
         };
+        combo_functions_layer_trans_marker { // for keymap svg
+            timeout-ms = <20>;
+            key-positions = <36 37>;
+            layers = <FUNCTS>;
+            bindings = <&trans>;
+        }
         combo_middle_click {
             timeout-ms = <100>;
             key-positions = <31 32>;
