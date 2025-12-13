@@ -66,6 +66,7 @@ draw_config:
     }
     .layer-FUNCTS-𝒇 .combopos-0 .tap {
       fill: #622fca;
+      font-size: 20px;
       translate: 0px;
     }
     
@@ -103,8 +104,8 @@ draw_config:
       font-size: 20px;
       translate: -0.5px -9.5px;
     }
-    .layer-SCROLL-🡙 .key:not(.keypos-33) .tap,
-    .layer-LOWDPI-🕀 .key:not(.keypos-34) .tap {
+    .layer-SCROLL-🡙 .key:not(.keypos-33,keypos-43) .tap,
+    .layer-LOWDPI-🕀 .key:not(.keypos-34,keypos-43) .tap {
       fill: #202020;
     }
     
