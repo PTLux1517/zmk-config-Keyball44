@@ -79,6 +79,56 @@ draw_config:
     rect.side {
       filter: brightness(80%);
     }
+    .keypos-0 text,
+    .keypos-11 text,
+    .keypos-12 text,
+    .keypos-23 text,
+    .keypos-24 text,
+    .keypos-35:not(.esc) text {
+      fill: #3b3933;
+    }
+    .keypos-0 rect,
+    .keypos-11 rect,
+    .keypos-12 rect,
+    .keypos-23 rect,
+    .keypos-24 rect,
+    .keypos-35:not(.esc) rect {
+      filter: brightness(280%);
+    }
+    .keypos-0 rect.side,
+    .keypos-11 rect.side,
+    .keypos-12 rect.side,
+    .keypos-23 rect.side,
+    .keypos-24 rect.side,
+    .keypos-35:not(.esc) rect {
+      filter: brightness(300%);
+    }
+    .keypos-38 rect,
+    .keypos-39:not(.layer-activator) rect,
+    .keypos-40 rect,
+    .keypos-41 rect,
+    .keypos-42 rect {
+      filter: brightness(182%);
+    }
+    .keypos-38 rect.side,
+    .keypos-39:not(.layer-activator) rect.side,
+    .keypos-40 rect.side,
+    .keypos-41 rect.side,
+    .keypos-42 rect.side {
+      filter: brightness(200%);
+    }
+    .keypos-38 text,
+    .keypos-39:not(.layer-activator) text,
+    .keypos-40 text,
+    .keypos-41 text,
+    .keypos-42 text {
+      filter: brightness(140%);
+    }
+    .keypos-36 rect,
+    .keypos-37 rect,
+    .keypos-43 rect {
+      fill: rebeccapurple;
+    }
 
     text {
       text-anchor: middle;
