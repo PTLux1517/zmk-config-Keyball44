@@ -59,7 +59,14 @@ draw_config:
     .layer-M-BTNS-🖰 .combopos-0 .tap {
       font-size: 24px;
       font-weight: bold;
-      translate: -1px 2px;
+      translate: -0.5px 2px;
+    }
+    .layer-FUNCTS-𝒇 .combopos-0 rect {
+        display: none;
+    }
+    .layer-FUNCTS-𝒇 .combopos-0 .tap {
+      fill: #622fca;
+      translate: 0px;
     }
     
     /* default key side styling, only used is draw_key_sides is set */
@@ -98,7 +105,7 @@ draw_config:
     }
     .layer-SCROLL-🡙 .key:not(.keypos-33) .tap,
     .layer-LOWDPI-🕀 .key:not(.keypos-34) .tap {
-      fill: #050505;
+      fill: #202020;
     }
     
     /* styling for key non-tap label text */
@@ -160,6 +167,17 @@ draw_config:
     text.ctrl {
       font-size: 30px;
       translate: 0px -5px;
+    }
+    text.paste {
+      rotate: -45deg;
+      translate: -3.5px -1px;
+      font-size: 24px;
+      font-weight: 100;
+    }
+    text.save {
+      font-size: 26px;
+      font-weight: 100;
+      translate: 0px -3px;
     }
 
     /* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
@@ -432,10 +450,18 @@ parse_config:
     LGUI: 🐧
     RGUI: 🐧
 
-    LC(C): 🗐
-    LC(X): ✀
-    LC(V): 📋︎
-    LC(S): 🖫
+    LC(C):
+      tap: 🗐
+      type: copy
+    LC(X):
+      tap: ✀
+      type: cut
+    LC(V):
+      tap: 📋︎
+      type: paste
+    LC(S):
+      tap: 🖫︎
+      type: save
 
     # Arrows
     UP: ▲
