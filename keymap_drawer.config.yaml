@@ -80,9 +80,8 @@ draw_config:
       translate: 0px -9px;
     }
     
-    /* fainter symbol for transparent keys */
     text.trans {
-      fill: #050505;
+      fill: #622fca;
     }
     
     /* styling for key non-tap label text */
@@ -113,8 +112,8 @@ draw_config:
       fill: #622fca;
     }
     
-    text.font20 {
-      font-size: 20px;
+    text.font22 {
+      font-size: 22px;
       font-weight: bold;
     }
     text.font24 {
@@ -267,7 +266,7 @@ parse_config:
       tap: 'R🖰⭶'
     "&mkp MB3":
       tap: 'M🖱⭱'
-      type: font20
+      type: font22
     "&mkp MB4":
       tap: '🡨B'
     "&mkp MB5":
@@ -411,10 +410,10 @@ parse_config:
 
     LSHFT:
       tap: ⇧
-      type: font30
+      type: font24
     RSHFT:
       tap: ⇧
-      type: font30
+      type: font24
 
     CAPS: ⇪
 

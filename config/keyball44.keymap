@@ -344,17 +344,7 @@
 &kp DEL               &kp LC(X)             &morph_LBKT7          &morph_RBKT8          &morph_CARET9         &morph_MULTIPLYHASH                                               &morph_PLUSAMPS       &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
 &kp LC(V)             &kp LC(C)             &morph_LT4            &morph_GT5            &morph_EQUAL6         &morph_DIVIDEBSLH                                                 &morph_MINUSPIPE      &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &kp SEMI
 &kp AT                &morph_HEX0           &morph_LBRC1          &morph_RBRC2          &morph_EXCL3          &morph_DOTDOLLAR                                                  &morph_COMMAPERCENT   &morph_VOLDNPREV      &morph_MUTEPLAYPAUSE  &morph_VOLUPNEXT      &kp LGUI              &kp ESC
-                                            &kp LPAR              &kp RPAR              &kp GRAVE             &trans                &trans                &morph_SPACEUNDER     &trans                                                                                  &mo M_BTNS
-            >;
-        };
-// ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: SYMBLS ------------------------------------------------------------------------------------------------------------------------------------------
-        symbol_layer {
-            label = "SYMBLS-±";
-            bindings = <
-&none                 &none                 &none                 &none                 &none                 &none                                                             &none                 &none                 &none                 &none                 &none                 &none
-&none                 &none                 &none                 &none                 &none                 &none                                                             &none                 &none                 &none                 &none                 &none                 &none
-&none                 &none                 &none                 &none                 &none                 &none                                                             &none                 &none                 &none                 &none                 &none                 &none
-                                            &none                 &none                 &none                 &none                 &none                 &none                 &none                                                                                   &none
+                                            &kp LPAR              &kp RPAR              &kp GRAVE             &trans                &kp LSHFT             &morph_SPACEUNDER     &kp ENTER                                                                               &mo M_BTNS
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: FUNCTS ------------------------------------------------------------------------------------------------------------------------------------------
@@ -374,7 +364,7 @@
 &kp DEL               &kp LC(X)             &none                 &none                 &none                 &kp BACKSPACE                                                     &kp PG_UP             &kp HOME              &kp UP                &kp END               &none                 &none
 &kp LC(V)             &kp LC(C)             &kp LC(S)             &none                 &none                 &none                                                             &kp PG_DN             &kp LEFT              &kp DOWN              &kp RIGHT             &none                 &none
 &none                 &none                 &none                 &none                 &none                 &none                                                             &kp ESC               &mkp MB1              &mkp MB2              &mo SCROLL            &mo LOWDPI            &none
-                                            &none                 &none                 &none                 &none                 &trans                &mkp MB4              &mkp MB5                                                                                &trans
+                                            &none                 &none                 &none                 &none                 &kp LSHFT             &mkp MB4              &mkp MB5                                                                                &trans
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: SCROLL ------------------------------------------------------------------------------------------------------------------------------------------
