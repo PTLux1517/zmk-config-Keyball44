@@ -38,6 +38,12 @@ draw_config:
     /* color accent for combo boxes */
     rect.combo, rect.combo-separate {
       fill: #0f577e;
+      width: 40px;
+      height: 30px;
+      translate: -6px -3px;
+    }
+    text.combo:not(.layer-activator) {
+      fill: #111111;
     }
     
     /* styling for combo dendrons */
@@ -49,6 +55,11 @@ draw_config:
     }
     .layer-M-BTNS-🖰 .combopos-0 {
       translate: 0px 45px;
+    }
+    .layer-M-BTNS-🖰 .combopos-0 .tap {
+      font-size: 24px;
+      font-weight: bold;
+      translate: -1px 2px;
     }
     
     /* default key side styling, only used is draw_key_sides is set */
@@ -82,6 +93,8 @@ draw_config:
     
     text.trans {
       fill: #622fca;
+      font-size: 20px;
+      translate: -1px -9.5px;
     }
     
     /* styling for key non-tap label text */
@@ -112,10 +125,6 @@ draw_config:
       fill: #622fca;
     }
     
-    text.font22 {
-      font-size: 22px;
-      font-weight: bold;
-    }
     text.font24 {
       font-size: 24px;
     }
@@ -232,7 +241,7 @@ parse_config:
   sticky_label: stky
   toggle_label: togl
   trans_legend:
-    tap: ▽
+    tap: ⬤
     type: trans
 
   raw_binding_map:
@@ -266,7 +275,6 @@ parse_config:
       tap: 'R🖰⭶'
     "&mkp MB3":
       tap: 'M🖱⭱'
-      type: font22
     "&mkp MB4":
       tap: '🡨B'
     "&mkp MB5":
