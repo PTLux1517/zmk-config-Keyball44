@@ -116,7 +116,7 @@
         morph_CARET8: morph_caret_eight {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N8>, <&kp caret>;
+            bindings = <&kp N8>, <&kp CARET>;
             mods = <(MOD_LSFT)>;
         };
         morph_RBRC9: morph_rightbrace_nine {
