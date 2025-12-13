@@ -160,26 +160,41 @@ path.combo {
   stroke: #554a34;
   fill: none;
 }
+.layer-ALPHAS-𝜶,
+.layer-DIGITS-ℤ,
+.layer-FUNCTS-𝒇 {
+  translate: 0px -30px;
+}
 .layer-M-BTNS-🖰,
 .layer-SCROLL-🡙,
 .layer-LOWDPI-🕀 {
-  translate: 0px 150px;
+  translate: 0px 56px;
 }
 .layer-M-BTNS-🖰 .combopos-0 {
   translate: 0px 45px;
 }
 .layer-M-BTNS-🖰 .combopos-0 .tap {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
-  translate: -0.5px 2px;
+  translate: -0.5px 1px;
 }
 .layer-FUNCTS-𝒇 .combopos-0 rect {
     display: none;
 }
 .layer-FUNCTS-𝒇 .combopos-0 .tap {
   fill: #622fca;
-  font-size: 20px;
+  font-size: 24px;
   translate: 0px;
+}
+.layer-DIGITS-ℤ .keypos-39 text {
+  fill: #622fca;
+  filter: none !important;
+}
+
+text.trans {
+  fill: #202020;
+  font-size: 20px;
+  translate: -0.5px -9.5px;
 }
 
 /* default key side styling, only used is draw_key_sides is set */
@@ -193,6 +208,14 @@ rect.side {
 .keypos-24 text,
 .keypos-35:not(.esc) text {
   fill: #3b3933;
+}
+.keypos-0 text.trans,
+.keypos-11 text.trans,
+.keypos-12 text.trans,
+.keypos-23 text.trans,
+.keypos-24 text.trans,
+.keypos-35 text.trans {
+  fill: #666;
 }
 .keypos-0 rect,
 .keypos-11 rect,
@@ -231,10 +254,27 @@ rect.side {
 .keypos-42 text {
   filter: brightness(140%);
 }
+.keypos-38 text.trans,
+.keypos-39 text.trans,
+.keypos-40 text.trans,
+.keypos-41 text.trans,
+.keypos-42 text.trans {
+  filter: brightness(200%);
+}
 .keypos-36 rect,
 .keypos-37 rect,
 .keypos-43 rect {
   fill: rebeccapurple;
+}
+.keypos-36 text.trans,
+.keypos-37 text.trans,
+.keypos-43 text.trans {
+  fill: #5d2e8b;
+}
+.keypos-36 text.shifted,
+.keypos-37 text.shifted,
+.keypos-43 text.shifted {
+  fill: #727031;
 }
 
 text {
@@ -261,14 +301,11 @@ text.layer-activator:not(.combo) {
   translate: 0px -9px;
 }
 
-text.trans {
+.layer-SCROLL-🡙 .keypos-33 .tap,
+.layer-SCROLL-🡙 .keypos-43 .tap,
+.layer-LOWDPI-🕀 .keypos-34 .tap,
+.layer-LOWDPI-🕀 .keypos-43 .tap {
   fill: #622fca;
-  font-size: 20px;
-  translate: -0.5px -9.5px;
-}
-.layer-SCROLL-🡙 .key:not(.keypos-33):not(.keypos-43) .tap,
-.layer-LOWDPI-🕀 .key:not(.keypos-34):not(.keypos-43) .tap {
-  fill: #202020;
 }
 
 /* styling for key non-tap label text */
@@ -276,7 +313,7 @@ text.hold, text.shifted, text.left, text.right {
   font-size: 18px;
   font-weight: bold;
   /*fill: #b8ca2f;*/
-  fill: #4b4b40;
+  fill: #595840;
 }
 
 text.combo {
@@ -293,6 +330,7 @@ text.hold {
 text.shifted {
   text-anchor: middle;
   dominant-baseline: hanging;
+  translate: 0px 3px;
 }
 
 /* Color accent for held keys */
@@ -318,8 +356,10 @@ text.shiftcaps {
   font-size: 24px;
 }
 text.shiftcaps.shifted {
+  font-size: 32px;
   font-weight: 100;
   font-family: Aldrich;
+  translate: 0px 10px;
 }
 text.tab {
   translate: 0px 2px;
@@ -337,8 +377,9 @@ rect.esc {
   fill: #635b21;
 }
 text.ctrl {
-  font-size: 30px;
-  translate: 0px -5px;
+  font-size: 34px;
+  font-weight: 100;
+  translate: 0px -6px;
 }
 text.paste {
   rotate: -45deg;
