@@ -314,6 +314,24 @@
             layers = <M_BTNS>;
             bindings = <&mkp MB3>;
         };
+        combo_left_ascii_arrow {
+            timeout-ms = <100>;
+            key-positions = <14 15>;
+            layers = <DIGITS>;
+            bindings = <&macro_left_ascii_arrow>;
+        };
+        combo_right_ascii_arrow {
+            timeout-ms = <100>;
+            key-positions = <15 16>;
+            layers = <DIGITS>;
+            bindings = <&macro_right_ascii_arrow>;
+        };
+        combo_left_ascii_arrow {
+            timeout-ms = <100>;
+            key-positions = <14 15 16>;
+            layers = <DIGITS>;
+            bindings = <&macro_html_comment>;
+        };
     };
 
     macros {
@@ -321,6 +339,35 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp N0>, <&macro_tap &kp X>;
+        };
+        macro_left_ascii_arrow: macro_left_ascii_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LT>, <&macro_tap &kp MINUS>;
+        };
+        macro_right_ascii_arrow: macro_right_ascii_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp MINUS>, <&macro_tap &kp GT>;
+        };
+        macro_html_comment: macro_html_comment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LT>
+                , <&macro_tap &kp EXCL>
+                , <&macro_tap &kp MINUS>
+                , <&macro_tap &kp MINUS>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp MINUS>
+                , <&macro_tap &kp MINUS>
+                , <&macro_tap &kp GT>
+                , <&macro_tap &kp LEFT>
+                , <&macro_tap &kp LEFT>
+                , <&macro_tap &kp LEFT>
+                , <&macro_tap &kp LEFT>
+                ;
         };
     };
 
