@@ -160,8 +160,8 @@ layers:
   - ▶
   - {type: none}
   - {type: none}
-  - {type: none}
-  - {type: none}
+  - {t: ⎈, type: ctrl}
+  - ⎇
   - {type: none}
   - {type: none}
   - {type: none}
