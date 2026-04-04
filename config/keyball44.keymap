@@ -326,7 +326,7 @@
             layers = <DIGITS>;
             bindings = <&macro_right_ascii_arrow>;
         };
-        combo_left_ascii_arrow {
+        combo_html_comment {
             timeout-ms = <100>;
             key-positions = <14 15 16>;
             layers = <DIGITS>;
