@@ -50,7 +50,7 @@ draw_config:
     path.combo {
       stroke-width: 6;
       stroke-linecap: round;
-      stroke: #554a34;
+      stroke: #0f577e;
       fill: none;
     }
     .layer-ALPHAS-𝜶,
@@ -82,6 +82,18 @@ draw_config:
     .layer-DIGITS-ℤ .keypos-39 text {
       fill: #622fca;
       filter: none !important;
+    }
+    .layer-DIGITS-ℤ .combopos-3 {
+      translate: 0 15px;
+    }
+    .layer-DIGITS-ℤ .combopos-3 rect {
+      display: none;
+    }
+    .layer-DIGITS-ℤ .combopos-3 .tap {
+      fill: hsl(58,40%,44%);
+      font-size: 26px;
+      font-weight: bold;
+      translate: 0 1.5px;
     }
     
     text.trans {
@@ -415,6 +427,12 @@ parse_config:
       type: shiftcaps
     "&macro_hex_pfx":
       tap: '0x'
+    "&macro_left_ascii_arrow":
+      tap: '<-'
+    "&macro_right_ascii_arrow":
+      tap: '->'
+    "&macro_html_comment":
+      tap: '<!--  -->'
     "&uc 0x2014 0":
       tap: —
     "&morph_JUSTDOT":
