@@ -315,19 +315,19 @@
             bindings = <&mkp MB3>;
         };
         combo_left_ascii_arrow {
-            timeout-ms = <100>;
+            timeout-ms = <20>;
             key-positions = <14 15>;
             layers = <DIGITS>;
             bindings = <&macro_left_ascii_arrow>;
         };
         combo_right_ascii_arrow {
-            timeout-ms = <100>;
+            timeout-ms = <20>;
             key-positions = <15 16>;
             layers = <DIGITS>;
             bindings = <&macro_right_ascii_arrow>;
         };
         combo_html_comment {
-            timeout-ms = <100>;
+            timeout-ms = <20>;
             key-positions = <14 15 16>;
             layers = <DIGITS>;
             bindings = <&macro_html_comment>;
