@@ -944,6 +944,20 @@ text.save {
 <rect rx="6" ry="6" x="468" y="253" width="28" height="26" class="combo"/>
 <text x="482" y="266" class="combo tap">—</text>
 </g>
+<g class="combo combopos-1">
+<rect rx="6" ry="6" x="154" y="78" width="28" height="26" class="combo"/>
+<text x="168" y="91" class="combo tap"><tspan style="font-size: 62%">&amp;macro_…</tspan></text>
+</g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="210" y="77" width="28" height="26" class="combo"/>
+<text x="224" y="90" class="combo tap"><tspan style="font-size: 62%">&amp;macro_…</tspan></text>
+</g>
+<g class="combo combopos-3">
+<path d="M196,92 l-37,4" class="combo"/>
+<path d="M196,92 l37,2" class="combo"/>
+<rect rx="6" ry="6" x="182" y="79" width="28" height="26" class="combo"/>
+<text x="196" y="92" class="combo tap"><tspan style="font-size: 62%">&amp;macro_…</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 733)" class="layer-FUNCTS-𝒇">

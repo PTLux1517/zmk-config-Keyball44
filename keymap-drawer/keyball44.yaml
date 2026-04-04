@@ -286,3 +286,12 @@ combos:
 - p: [31, 32]
   k: M🖱⭱
   l: [M-BTNS-🖰]
+- p: [14, 15]
+  k: '&macro_left_ascii_arrow'
+  l: [DIGITS-ℤ]
+- p: [15, 16]
+  k: '&macro_right_ascii_arrow'
+  l: [DIGITS-ℤ]
+- p: [14, 15, 16]
+  k: '&macro_html_comment'
+  l: [DIGITS-ℤ]
