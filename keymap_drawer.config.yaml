@@ -423,10 +423,8 @@ parse_config:
     # Custom Multikeys
     "&td_SHFTCAPS":
       tap: ⇧
-      shifted: ⇪1-⇪🔒︎
+      shifted: ⇪/⎴
       type: shiftcaps
-    "&macro_hex_pfx":
-      tap: '0x'
     "&macro_left_ascii_arrow":
       tap: '<-'
     "&macro_right_ascii_arrow":
@@ -441,6 +439,10 @@ parse_config:
     "&morph_JUSTCOMMA":
       tap: ','
       shifted: ''
+    "&morph_SPACEHYPHEN":
+      tap: ␣
+      shifted: '-'
+      type: space  
     "&morph_SPACEUNDER":
       tap: ␣
       shifted: _

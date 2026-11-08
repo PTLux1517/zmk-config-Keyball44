@@ -63,12 +63,18 @@
             bindings = <&kp SPACE>, <&kp UNDER>;
             mods = <(MOD_LSFT)>;
         };
-
-        // --------------- NUMPAD ----------------
-        morph_HEX0: morph_hex_zero {
+        morph_SPACEHYPHEN: morph_space_hyphen {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N0>, <&macro_hex_pfx>;
+            bindings = <&kp SPACE>, <&kp KP_MINUS>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        // --------------- NUMPAD ----------------
+        morph_TILDE0: morph_tilde_zero {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp TILDE>;
             mods = <(MOD_LSFT)>;
         };
         morph_LBKT1: morph_leftbracket_one {
@@ -315,19 +321,19 @@
             bindings = <&mkp MB3>;
         };
         combo_left_ascii_arrow {
-            timeout-ms = <20>;
+            timeout-ms = <15>;
             key-positions = <14 15>;
             layers = <DIGITS>;
             bindings = <&macro_left_ascii_arrow>;
         };
         combo_right_ascii_arrow {
-            timeout-ms = <20>;
+            timeout-ms = <15>;
             key-positions = <15 16>;
             layers = <DIGITS>;
             bindings = <&macro_right_ascii_arrow>;
         };
         combo_html_comment {
-            timeout-ms = <20>;
+            timeout-ms = <15>;
             key-positions = <14 15 16>;
             layers = <DIGITS>;
             bindings = <&macro_html_comment>;
@@ -335,11 +341,6 @@
     };
 
     macros {
-        macro_hex_pfx: macro_hex_pfx {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp N0>, <&macro_tap &kp X>;
-        };
         macro_left_ascii_arrow: macro_left_ascii_arrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -386,16 +387,16 @@
 &kp DEL               &kp G                 &kp V                 &kp D                 &kp F                 &kp J                                                             &kp Q                 &kp R                 &kp U                 &kp O                 &kp Y                 &kp BACKSPACE
 &kp LALT              &kp C                 &kp S                 &kp T                 &kp H                 &kp APOS                                                          &kp L                 &kp N                 &kp E                 &kp A                 &kp I                 &kp SEMI
 &kp LCTRL             &kp W                 &kp B                 &kp M                 &kp P                 &kp K                                                             &kp Z                 &kp X                 &morph_JUSTCOMMA      &morph_JUSTDOT        &kp QMARK             &kp EXCL
-                                            &kp LPAR              &kp RPAR              &kp GRAVE             &mo DIGITS            &td_SHFTCAPS          &kp SPACE             &kp ENTER                                                                               &mo M_BTNS
+                                            &kp LPAR              &kp RPAR              &kp GRAVE             &mo DIGITS            &td_SHFTCAPS          morph_SPACEHYPHEN     &kp ENTER                                                                               &mo M_BTNS
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: DIGITS ------------------------------------------------------------------------------------------------------------------------------------------
         number_layer {
             label = "DIGITS-ℤ";
             bindings = <
-&kp DEL               &kp LC(X)             &morph_LBRC7          &morph_CARET8         &morph_RBRC9          &morph_MULTIPLYAMPS                                               &morph_PLUSPIPE       &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
-&kp LC(V)             &kp LC(C)             &morph_LT4            &morph_EQUAL5         &morph_GT6            &morph_DIVIDEBSLH                                                 &morph_MINUSHASH      &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &kp SEMI
-&kp AT                &morph_HEX0           &morph_LBKT1          &morph_EXCL2          &morph_RBKT3          &morph_DOTDOLLAR                                                  &morph_COMMAPERCENT   &morph_VOLDNPREV      &morph_MUTEPLAYPAUSE  &morph_VOLUPNEXT      &kp LGUI              &kp ESC
+&kp DEL               &kp LC(V)             &morph_LBRC7          &morph_CARET8         &morph_RBRC9          &morph_MULTIPLYAMPS                                               &morph_PLUSPIPE       &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
+&kp LC(X)             &kp LC(C)             &morph_LT4            &morph_EQUAL5         &morph_GT6            &morph_DIVIDEBSLH                                                 &morph_MINUSHASH      &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &kp SEMI
+&kp AT                &morph_TILDE0         &morph_LBKT1          &morph_EXCL2          &morph_RBKT3          &morph_DOTDOLLAR                                                  &morph_COMMAPERCENT   &morph_VOLDNPREV      &morph_VOLUPNEXT      &morph_MUTEPLAYPAUSE  &kp LGUI              &kp ESC
                                             &kp LPAR              &kp RPAR              &kp GRAVE             &trans                &kp LSHFT             &morph_SPACEUNDER     &kp ENTER                                                                               &mo M_BTNS
             >;
         };
