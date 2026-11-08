@@ -387,7 +387,7 @@
 &kp DEL               &kp G                 &kp V                 &kp D                 &kp F                 &kp J                                                             &kp Q                 &kp R                 &kp U                 &kp O                 &kp Y                 &kp BACKSPACE
 &kp LALT              &kp C                 &kp S                 &kp T                 &kp H                 &kp APOS                                                          &kp L                 &kp N                 &kp E                 &kp A                 &kp I                 &kp SEMI
 &kp LCTRL             &kp W                 &kp B                 &kp M                 &kp P                 &kp K                                                             &kp Z                 &kp X                 &morph_JUSTCOMMA      &morph_JUSTDOT        &kp QMARK             &kp EXCL
-                                            &kp LPAR              &kp RPAR              &kp GRAVE             &mo DIGITS            &td_SHFTCAPS          morph_SPACEHYPHEN     &kp ENTER                                                                               &mo M_BTNS
+                                            &kp LPAR              &kp RPAR              &kp GRAVE             &mo DIGITS            &td_SHFTCAPS          &morph_SPACEHYPHEN    &kp ENTER                                                                               &mo M_BTNS
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: DIGITS ------------------------------------------------------------------------------------------------------------------------------------------
