@@ -680,7 +680,7 @@ text.save {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key shiftcaps side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key shiftcaps"/>
 <text x="0" y="-4" class="key shiftcaps tap">⇧</text>
-<text x="0" y="-24" class="key shiftcaps shifted">⇪-⎴</text>
+<text x="0" y="-24" class="key shiftcaps shifted">⇪⎴</text>
 </g>
 <g transform="translate(453, 273) rotate(-25.0)" class="key space keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key space side"/>

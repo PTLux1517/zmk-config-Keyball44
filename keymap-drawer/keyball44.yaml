@@ -41,7 +41,7 @@ layers:
   - )
   - {t: '`', s: '~'}
   - {t: ℤ, type: layer-activator}
-  - {t: ⇧, s: ⇪-⎴, type: shiftcaps}
+  - {t: ⇧, s: ⇪⎴, type: shiftcaps}
   - {t: ␣, s: '-', type: space}
   - {t: ↵, type: font24}
   - {t: 🖰, type: layer-activator}
