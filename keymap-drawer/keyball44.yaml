@@ -41,7 +41,7 @@ layers:
   - )
   - {t: '`', s: '~'}
   - {t: ℤ, type: layer-activator}
-  - {t: ⇧, s: ⇪/⎴, type: shiftcaps}
+  - {t: ⇧, s: ⇪-⎴, type: shiftcaps}
   - {t: ␣, s: '-', type: space}
   - {t: ↵, type: font24}
   - {t: 🖰, type: layer-activator}
@@ -137,7 +137,7 @@ layers:
   - {type: none}
   M-BTNS-🖰:
   - {t: 🠶, type: font24}
-  - {t: ✀, type: cut}
+  - {t: 📋︎, type: paste}
   - {type: none}
   - {type: none}
   - {type: none}
@@ -148,7 +148,7 @@ layers:
   - E↦
   - {type: none}
   - {type: none}
-  - {t: 📋︎, type: paste}
+  - {t: ✀, type: cut}
   - {t: 🗐, type: copy}
   - {t: 🖫︎, type: save}
   - {type: none}
