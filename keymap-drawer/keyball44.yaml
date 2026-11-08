@@ -41,13 +41,13 @@ layers:
   - )
   - {t: '`', s: '~'}
   - {t: ℤ, type: layer-activator}
-  - {t: ⇧, s: ⇪1-⇪🔒︎, type: shiftcaps}
-  - {t: ␣, type: space}
+  - {t: ⇧, s: ⇪/⎴, type: shiftcaps}
+  - {t: ␣, s: '-', type: space}
   - {t: ↵, type: font24}
   - {t: 🖰, type: layer-activator}
   DIGITS-ℤ:
   - {t: 🠶, type: font24}
-  - {t: ✀, type: cut}
+  - {t: 📋︎, type: paste}
   - {t: '7', s: '{'}
   - {t: '8', s: ^}
   - {t: '9', s: '}'}
@@ -58,7 +58,7 @@ layers:
   - E↦
   - ↥U
   - {t: 🠴, type: font24}
-  - {t: 📋︎, type: paste}
+  - {t: ✀, type: cut}
   - {t: 🗐, type: copy}
   - {t: '4', s: <}
   - {t: '5', s: '='}
@@ -71,15 +71,15 @@ layers:
   - ↧D
   - {t: ;, s: ':'}
   - '@'
-  - {t: '0', s: 0x}
+  - {t: '0', s: '~'}
   - {t: '1', s: '['}
   - {t: '2', s: '!'}
   - {t: '3', s: ']'}
   - {t: ., s: $}
   - {t: ',', s: '%'}
   - {t: 🕩, s: ⏮}
-  - {t: 🕨, s: ⏯}
   - {t: 🕪, s: ⏭}
+  - {t: 🕨, s: ⏯}
   - 🐧
   - {t: ⎋, type: esc}
   - (

@@ -680,12 +680,13 @@ text.save {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key shiftcaps side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key shiftcaps"/>
 <text x="0" y="-4" class="key shiftcaps tap">⇧</text>
-<text x="0" y="-24" class="key shiftcaps shifted"><tspan style="font-size: 83%">⇪1-⇪🔒︎</tspan></text>
+<text x="0" y="-24" class="key shiftcaps shifted">⇪/⎴</text>
 </g>
 <g transform="translate(453, 273) rotate(-25.0)" class="key space keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key space side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key space"/>
 <text x="0" y="-4" class="key space tap">␣</text>
+<text x="0" y="-24" class="key space shifted">-</text>
 </g>
 <g transform="translate(512, 258) rotate(-10.0)" class="key font24 keypos-42">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key font24 side"/>
@@ -715,10 +716,10 @@ text.save {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key font24"/>
 <text x="0" y="-4" class="key font24 tap">🠶</text>
 </g>
-<g transform="translate(84, 56)" class="key cut keypos-1">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key cut side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key cut"/>
-<text x="0" y="-4" class="key cut tap">✀</text>
+<g transform="translate(84, 56)" class="key paste keypos-1">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key paste side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key paste"/>
+<text x="0" y="-4" class="key paste tap">📋︎</text>
 </g>
 <g transform="translate(140, 42)" class="key keypos-2">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -775,10 +776,10 @@ text.save {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key font24"/>
 <text x="0" y="-4" class="key font24 tap">🠴</text>
 </g>
-<g transform="translate(28, 112)" class="key paste keypos-12">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key paste side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key paste"/>
-<text x="0" y="-4" class="key paste tap">📋︎</text>
+<g transform="translate(28, 112)" class="key cut keypos-12">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key cut side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key cut"/>
+<text x="0" y="-4" class="key cut tap">✀</text>
 </g>
 <g transform="translate(84, 112)" class="key copy keypos-13">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key copy side"/>
@@ -850,7 +851,7 @@ text.save {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">0</text>
-<text x="0" y="-24" class="key shifted">0x</text>
+<text x="0" y="-24" class="key shifted">~</text>
 </g>
 <g transform="translate(140, 154)" class="key keypos-26">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -891,14 +892,14 @@ text.save {
 <g transform="translate(644, 140)" class="key keypos-32">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">🕨</text>
-<text x="0" y="-24" class="key shifted">⏯</text>
+<text x="0" y="-4" class="key tap">🕪</text>
+<text x="0" y="-24" class="key shifted">⏭</text>
 </g>
 <g transform="translate(700, 154)" class="key keypos-33">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">🕪</text>
-<text x="0" y="-24" class="key shifted">⏭</text>
+<text x="0" y="-4" class="key tap">🕨</text>
+<text x="0" y="-24" class="key shifted">⏯</text>
 </g>
 <g transform="translate(756, 168)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
