@@ -131,7 +131,7 @@ layers:
   - {t: 𝒇(22), type: func}
   - {t: 𝒇(23), type: func}
   - {t: 𝒇(24), type: func}
-  - {t: R⇧, type: font24}
+  - {t: R⇧, type: rshft}
   - {t: ⇧, type: font24}
   - {type: none}
   - {type: none}
