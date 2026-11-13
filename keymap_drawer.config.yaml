@@ -641,7 +641,7 @@ parse_config:
       type: font24
     RSHFT:
       tap: 'R⇧'
-      type: font24
+      type: rshft
 
     CAPS: ⇪
 
