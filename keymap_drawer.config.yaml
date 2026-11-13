@@ -429,6 +429,9 @@ parse_config:
       tap: ⇧
       shifted: ⇪∘
       type: shiftcaps
+    "&td_QUOTES":
+      tap: "'"
+      shifted: '"'
     "&macro_left_ascii_arrow":
       tap: '<-'
     "&macro_right_ascii_arrow":
