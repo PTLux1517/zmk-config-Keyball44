@@ -57,6 +57,24 @@
             bindings = <&kp COMMA>, <&kp COMMA>;
             mods = <(MOD_LSFT)>;
         };
+        morph_JUSTGRAVE: morph_just_grave {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>, <&kp GRAVE>;
+            mods = <(MOD_LSFT)>;
+        };
+        morph_TILDEQMARK: morph_tilde_qmark {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE>, <&kp QMARK>;
+            mods = <(MOD_LSFT)>;
+        };
+        morph_DQTSQT: morph_doublequote_singlequote {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DQT>, <&kp SQT>;
+            mods = <(MOD_LSFT)>;
+        };
         morph_SPACEUNDER: morph_space_underscore {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -69,12 +87,19 @@
             bindings = <&kp SPACE>, <&kp KP_MINUS>;
             mods = <(MOD_LSFT)>;
         };
-
-        // --------------- NUMPAD ----------------
-        morph_TILDE0: morph_tilde_zero {
+        // -------------- SHORTCUTS --------------
+        morph_COPYCUT: morph_copy_cut {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp TILDE>;
+            bindings = <&kp LC(C)>, <&kp LC(X)>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        // --------------- NUMPAD ----------------
+        morph_AT0: morph_at_zero {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp AT>;
             mods = <(MOD_LSFT)>;
         };
         morph_LBKT1: morph_leftbracket_one {
@@ -387,17 +412,17 @@
 &kp DEL               &kp G                 &kp V                 &kp D                 &kp F                 &kp J                                                             &kp Q                 &kp R                 &kp U                 &kp O                 &kp Y                 &kp BACKSPACE
 &kp LALT              &kp C                 &kp S                 &kp T                 &kp H                 &kp APOS                                                          &kp L                 &kp N                 &kp E                 &kp A                 &kp I                 &kp SEMI
 &kp LCTRL             &kp W                 &kp B                 &kp M                 &kp P                 &kp K                                                             &kp Z                 &kp X                 &morph_JUSTCOMMA      &morph_JUSTDOT        &kp QMARK             &kp EXCL
-                                            &kp LPAR              &kp RPAR              &kp GRAVE             &mo DIGITS            &td_SHFTCAPS          &morph_SPACEHYPHEN    &kp ENTER                                                                               &mo M_BTNS
+                                            &morph_COPYCUT        &kp LC(V)             &morph_JUSTGRAVE      &mo DIGITS            &td_SHFTCAPS          &morph_SPACEHYPHEN    &kp ENTER                                                                               &mo M_BTNS
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: DIGITS ------------------------------------------------------------------------------------------------------------------------------------------
         number_layer {
             label = "DIGITS-ℤ";
             bindings = <
-&kp DEL               &kp LC(V)             &morph_LBRC7          &morph_CARET8         &morph_RBRC9          &morph_MULTIPLYAMPS                                               &morph_PLUSPIPE       &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
-&kp LC(X)             &kp LC(C)             &morph_LT4            &morph_EQUAL5         &morph_GT6            &morph_DIVIDEBSLH                                                 &morph_MINUSHASH      &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &kp SEMI
-&kp AT                &morph_TILDE0         &morph_LBKT1          &morph_EXCL2          &morph_RBKT3          &morph_DOTDOLLAR                                                  &morph_COMMAPERCENT   &morph_VOLDNPREV      &morph_VOLUPNEXT      &morph_MUTEPLAYPAUSE  &kp LGUI              &kp ESC
-                                            &kp LPAR              &kp RPAR              &kp GRAVE             &trans                &kp LSHFT             &morph_SPACEUNDER     &kp ENTER                                                                               &mo M_BTNS
+&kp DEL               &morph_MUTEPLAYPAUSE  &morph_LBRC7          &morph_CARET8         &morph_RBRC9          &morph_MULTIPLYAMPS                                               &morph_PLUSPIPE       &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
+&morph_VOLDNPREV      &morph_VOLUPNEXT      &morph_LT4            &morph_EQUAL5         &morph_GT6            &morph_DIVIDEBSLH                                                 &morph_MINUSHASH      &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &kp SEMI
+&morph_DQTSQT         &morph_AT0            &morph_LBKT1          &morph_EXCL2          &morph_RBKT3          &morph_DOTDOLLAR                                                  &morph_COMMAPERCENT   &kp LPAR              &morph_TILDEQMARK     &kp LPAR              &kp LGUI              &kp ESC
+                                            &morph_COPYCUT        &kp LC(V)             &morph_JUSTGRAVE      &trans                &kp LSHFT             &morph_SPACEUNDER     &kp ENTER                                                                               &mo M_BTNS
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: FUNCTS ------------------------------------------------------------------------------------------------------------------------------------------
@@ -414,10 +439,10 @@
         mouse_button_layer {
             label = "M-BTNS-🖰";
             bindings = <
-&kp DEL               &kp LC(V)             &none                 &none                 &none                 &kp BACKSPACE                                                     &kp PG_UP             &kp HOME              &kp UP                &kp END               &none                 &none
-&kp LC(X)             &kp LC(C)             &kp LC(S)             &none                 &none                 &none                                                             &kp PG_DN             &kp LEFT              &kp DOWN              &kp RIGHT             &none                 &none
-&kp LCTRL             &kp LALT              &none                 &none                 &none                 &none                                                             &kp ESC               &mkp MB1              &mkp MB2              &mo SCROLL            &mo LOWDPI            &none
-                                            &none                 &none                 &none                 &none                 &kp LSHFT             &mkp MB4              &mkp MB5                                                                                &trans
+&kp DEL               &none                 &none                 &none                 &none                 &kp BACKSPACE                                                     &kp PG_UP             &kp HOME              &kp UP                &kp END               &none                 &none
+&kp LALT              &none                 &kp LC(S)             &none                 &none                 &none                                                             &kp PG_DN             &kp LEFT              &kp DOWN              &kp RIGHT             &none                 &none
+&kp LCTRL             &none                 &none                 &none                 &none                 &none                                                             &kp ESC               &mkp MB1              &mkp MB2              &mo SCROLL            &mo LOWDPI            &none
+                                            &morph_COPYCUT        &kp LC(V)             &none                 &none                 &kp LSHFT             &mkp MB4              &mkp MB5                                                                                &trans
             >;
         };
 // ----------------------------------------------------------------------------------------------------------------------------------------- LAYER: SCROLL ------------------------------------------------------------------------------------------------------------------------------------------

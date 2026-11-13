@@ -423,7 +423,7 @@ parse_config:
     # Custom Multikeys
     "&td_SHFTCAPS":
       tap: ⇧
-      shifted: ⇪⎴
+      shifted: ⇪∘
       type: shiftcaps
     "&macro_left_ascii_arrow":
       tap: '<-'
@@ -439,6 +439,15 @@ parse_config:
     "&morph_JUSTCOMMA":
       tap: ','
       shifted: ''
+    "&morph_JUSTGRAVE":
+      tap: '`'
+      shifted: ''
+    "&morph_TILDEQMARK":
+      tap: '~'
+      shifted: '?'
+    "&morph_DQTSQT":
+      tap: '"'
+      shifted: "'"
     "&morph_SPACEHYPHEN":
       tap: ␣
       shifted: '-'
@@ -447,6 +456,9 @@ parse_config:
       tap: ␣
       shifted: _
       type: space
+    "morph_COPYCUT":
+      tap: 🗐
+      shifted: ✀
     "&morph_F01_F11":
       tap: '𝒇(1)'
       shifted: '𝒇(11)'
