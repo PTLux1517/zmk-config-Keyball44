@@ -37,17 +37,17 @@ layers:
   - .
   - '?'
   - '!'
-  - (
-  - )
-  - {t: '`', s: '~'}
+  - {t: 🗐, s: ✀}
+  - {t: 📋︎, type: paste}
+  - '`'
   - {t: ℤ, type: layer-activator}
-  - {t: ⇧, s: ⇪⎴, type: shiftcaps}
+  - {t: ⇧, s: ⇪∘, type: shiftcaps}
   - {t: ␣, s: '-', type: space}
   - {t: ↵, type: font24}
   - {t: 🖰, type: layer-activator}
   DIGITS-ℤ:
   - {t: 🠶, type: font24}
-  - {t: 📋︎, type: paste}
+  - {t: 🕨, s: ⏯}
   - {t: '7', s: '{'}
   - {t: '8', s: ^}
   - {t: '9', s: '}'}
@@ -58,8 +58,8 @@ layers:
   - E↦
   - ↥U
   - {t: 🠴, type: font24}
-  - {t: ✀, type: cut}
-  - {t: 🗐, type: copy}
+  - {t: 🕩, s: ⏮}
+  - {t: 🕪, s: ⏭}
   - {t: '4', s: <}
   - {t: '5', s: '='}
   - {t: '6', s: '>'}
@@ -70,21 +70,21 @@ layers:
   - ▶
   - ↧D
   - {t: ;, s: ':'}
-  - '@'
-  - {t: '0', s: '~'}
+  - {t: '"', s: ''''}
+  - {t: '0', s: '@'}
   - {t: '1', s: '['}
   - {t: '2', s: '!'}
   - {t: '3', s: ']'}
   - {t: ., s: $}
   - {t: ',', s: '%'}
-  - {t: 🕩, s: ⏮}
-  - {t: 🕪, s: ⏭}
-  - {t: 🕨, s: ⏯}
+  - (
+  - {t: '~', s: '?'}
+  - (
   - 🐧
   - {t: ⎋, type: esc}
-  - (
-  - )
-  - {t: '`', s: '~'}
+  - {t: 🗐, s: ✀}
+  - {t: 📋︎, type: paste}
+  - '`'
   - {t: ⬤, type: trans}
   - {t: ⇧, type: font24}
   - {t: ␣, s: _, type: space}
@@ -137,7 +137,7 @@ layers:
   - {type: none}
   M-BTNS-🖰:
   - {t: 🠶, type: font24}
-  - {t: 📋︎, type: paste}
+  - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
@@ -148,8 +148,8 @@ layers:
   - E↦
   - {type: none}
   - {type: none}
-  - {t: ✀, type: cut}
-  - {t: 🗐, type: copy}
+  - ⎇
+  - {type: none}
   - {t: 🖫︎, type: save}
   - {type: none}
   - {type: none}
@@ -161,7 +161,7 @@ layers:
   - {type: none}
   - {type: none}
   - {t: ⎈, type: ctrl}
-  - ⎇
+  - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
@@ -172,8 +172,8 @@ layers:
   - {t: 🡙, type: layer-activator}
   - {t: 🕀, type: layer-activator}
   - {type: none}
-  - {type: none}
-  - {type: none}
+  - {t: 🗐, s: ✀}
+  - {t: 📋︎, type: paste}
   - {type: none}
   - {type: none}
   - {t: ⇧, type: font24}
