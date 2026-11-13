@@ -356,6 +356,10 @@ text.font24 {
 text.font30 {
   font-size: 30px;
 }
+text.rshft {
+  font-size: 24px;
+  fill: #595840;
+}
 text.space.tap {
   font-size: 32px;
   translate: 0px -10px;
@@ -901,7 +905,7 @@ text.save {
 <g transform="translate(700, 154)" class="key keypos-33">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">(</text>
+<text x="0" y="-4" class="key tap">)</text>
 </g>
 <g transform="translate(756, 168)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1147,22 +1151,22 @@ text.save {
 <g transform="translate(140, 210)" class="key func keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key func side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key func"/>
-<text x="0" y="-24" class="key func shifted">𝒇(21)</text>
+<text x="0" y="-4" class="key func tap">𝒇(21)</text>
 </g>
 <g transform="translate(196, 196)" class="key func keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key func side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key func"/>
-<text x="0" y="-24" class="key func shifted">𝒇(22)</text>
+<text x="0" y="-4" class="key func tap">𝒇(22)</text>
 </g>
 <g transform="translate(266, 252)" class="key func keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key func side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key func"/>
-<text x="0" y="-24" class="key func shifted">𝒇(23)</text>
+<text x="0" y="-4" class="key func tap">𝒇(23)</text>
 </g>
 <g transform="translate(324, 256) rotate(10.0)" class="key func keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key func side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key func"/>
-<text x="0" y="-24" class="key func shifted">𝒇(24)</text>
+<text x="0" y="-4" class="key func tap">𝒇(24)</text>
 </g>
 <g transform="translate(382, 273) rotate(25.0)" class="key font24 keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key font24 side"/>
