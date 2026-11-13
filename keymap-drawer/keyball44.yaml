@@ -18,7 +18,7 @@ layers:
   - S
   - T
   - H
-  - {t: '''', s: '"'}
+  - '&td_QUOTES'
   - L
   - N
   - E
