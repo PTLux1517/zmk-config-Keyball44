@@ -259,25 +259,25 @@
         morph_F21: morph_f21 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&none>, <&kp F21>;
+            bindings = <&kp F21>, <&kp F21>;
             mods = <(MOD_RSFT)>;
         };
         morph_F22: morph_f22 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&none>, <&kp F22>;
+            bindings = <&kp F22>, <&kp F22>;
             mods = <(MOD_RSFT)>;
         };
         morph_F23: morph_f23 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&none>, <&kp F23>;
+            bindings = <&kp F23>, <&kp F23>;
             mods = <(MOD_RSFT)>;
         };
         morph_F24: morph_f24 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&none>, <&kp F24>;
+            bindings = <&kp F24>, <&kp F24>;
             mods = <(MOD_RSFT)>;
         };
 
@@ -421,7 +421,7 @@
             bindings = <
 &kp DEL               &morph_MUTEPLAYPAUSE  &morph_LBRC7          &morph_CARET8         &morph_RBRC9          &morph_MULTIPLYAMPS                                               &morph_PLUSPIPE       &kp HOME              &kp UP                &kp END               &kp PG_UP             &kp BACKSPACE
 &morph_VOLDNPREV      &morph_VOLUPNEXT      &morph_LT4            &morph_EQUAL5         &morph_GT6            &morph_DIVIDEBSLH                                                 &morph_MINUSHASH      &kp LEFT              &kp DOWN              &kp RIGHT             &kp PG_DN             &kp SEMI
-&morph_DQTSQT         &morph_AT0            &morph_LBKT1          &morph_EXCL2          &morph_RBKT3          &morph_DOTDOLLAR                                                  &morph_COMMAPERCENT   &kp LPAR              &morph_TILDEQMARK     &kp LPAR              &kp LGUI              &kp ESC
+&morph_DQTSQT         &morph_AT0            &morph_LBKT1          &morph_EXCL2          &morph_RBKT3          &morph_DOTDOLLAR                                                  &morph_COMMAPERCENT   &kp LPAR              &morph_TILDEQMARK     &kp RPAR              &kp LGUI              &kp ESC
                                             &morph_COPYCUT        &kp LC(V)             &morph_JUSTGRAVE      &trans                &kp LSHFT             &morph_SPACEUNDER     &kp ENTER                                                                               &mo M_BTNS
             >;
         };
