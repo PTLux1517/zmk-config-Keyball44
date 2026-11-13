@@ -311,6 +311,14 @@
                 <&caps_word>,
                 <&kp CAPS>;
         };
+        td_QUOTES: td_quotes {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <32>;
+            bindings =
+                <&kp SQT>,
+                <&kp DQT>;
+        };
     };
 
     combos {
@@ -410,7 +418,7 @@
             label = "ALPHAS-𝜶";
             bindings = <
 &kp DEL               &kp G                 &kp V                 &kp D                 &kp F                 &kp J                                                             &kp Q                 &kp R                 &kp U                 &kp O                 &kp Y                 &kp BACKSPACE
-&kp LALT              &kp C                 &kp S                 &kp T                 &kp H                 &kp APOS                                                          &kp L                 &kp N                 &kp E                 &kp A                 &kp I                 &kp SEMI
+&kp LALT              &kp C                 &kp S                 &kp T                 &kp H                 &td_QUOTES                                                        &kp L                 &kp N                 &kp E                 &kp A                 &kp I                 &kp SEMI
 &kp LCTRL             &kp W                 &kp B                 &kp M                 &kp P                 &kp K                                                             &kp Z                 &kp X                 &morph_JUSTCOMMA      &morph_JUSTDOT        &kp QMARK             &kp EXCL
                                             &morph_COPYCUT        &kp LC(V)             &morph_JUSTGRAVE      &mo DIGITS            &td_SHFTCAPS          &morph_SPACEHYPHEN    &kp ENTER                                                                               &mo M_BTNS
             >;
